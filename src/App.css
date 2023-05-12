@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
+@font-face {
+  font-family: 'adamwarrenpro';
+  src: url('./assets/font/adamwarrenpro.ttf');
+}
+@font-face {
+  font-family: 'adamwarrenpro-bold';
+  src: url('./assets/font/adamwarrenpro-bold.ttf');
+}
+@font-face {
+  font-family: 'adamwarrenpro-bolditalic';
+  src: url('./assets/font/adamwarrenpro-bolditalic.ttf');
+}
+
 .App {
   text-align: center;
 }
@@ -225,7 +238,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Montserrat', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -234,7 +247,9 @@ body {
   text-align: left;
   /* background: url('./assets/img/bg.jpg'); */
   /* background: #495057; */
-  background: linear-gradient(180deg, #D74041 0%, #BA1114 100%);
+  /* background: linear-gradient(180deg, #D74041 0%, #BA1114 100%); */
+
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(0)" opacity="0.2" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"></g></svg>'), white;
 
   background-size: cover!important;
   background-repeat: no-repeat!important;
@@ -10440,6 +10455,9 @@ button.bg-darker:focus {
 .text-white {
   color: #fff !important; }
 
+.text-black {
+  color: #000 !important; }
+
 .text-primary {
   color: #5e72e4 !important; }
 
@@ -17212,12 +17230,12 @@ td.rdtYear:hover {
   width: 1%; }
 
 .custom-button {
-  background: #ffbb00;
+  background: #FFF500;
   color: white;
   mix-blend-mode: normal;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  border: none;
+  /* border-radius: 20px; */
+  border: solid 1px black;
   font-weight: 'bold';
   min-width: 134px;
   font-family: 'Montserrat';
@@ -17591,12 +17609,24 @@ td.rdtYear:hover {
 
 .connect-button {
   max-height: 43px;
-  background-color: #FEB800;
-  color: white;
+  background-color: #FFF500;
+  color: black;
+  font-family: 'adamwarrenpro';
 }
 
 .date-title {
   display: flex;
   justify-content: center;
   background: #AA1B21;
+}
+
+.font-adamwarrenpro {
+  font-family: 'adamwarrenpro';
+}
+
+.title1 {
+  color: black;
+  font-family: 'adamwarrenpro';
+  font-size: 46px;
+
 }
