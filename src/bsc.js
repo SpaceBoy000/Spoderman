@@ -578,7 +578,7 @@ function WealthMountain() {
                 />
                 <div className="header_menu">
                     <Item>
-                        <a href={scanLinkSuffix + wealthContract} target="_blank" rel="noreferrer"
+                        <a href='/' target="_blank" rel="noreferrer"
                             style={{
                                 textDecoration: 'none',
                                 fontWeight: "bolder",
@@ -589,7 +589,7 @@ function WealthMountain() {
                         </a>
                     </Item>
                     <Item>
-                        <a href={scanLinkSuffix + wealthContract} target="_blank" rel="noreferrer"
+                        <a href='/' target="_blank" rel="noreferrer"
                             style={{
                                 textDecoration: 'none',
                                 fontWeight: "bolder",
@@ -600,7 +600,7 @@ function WealthMountain() {
                         </a>
                     </Item>
                     <Item>
-                        <a href="/hopdoc.pdf" target="_blank"
+                        <a href="/" target="_blank"
                             style={{
                                 textDecoration: 'none',
                                 fontWeight: "bolder",
