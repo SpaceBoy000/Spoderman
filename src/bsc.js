@@ -630,7 +630,7 @@ function WealthMountain() {
             <Container>
                 <CardDeck>
                     <Card className='banner-card' style={{paddingTop:'100px'}}>
-                        <h2 className="text-black text-uppercase font-weight-900 font-adamwarrenpro">The Amazing Spoderman</h2>
+                        <h2 className="text-black text-uppercase font-weight-900 font-adamwarrenpro title1">The Amazing Spoderman</h2>
                         <h6 className='text-black font-weight-bold' style={{lineHeight:'1.5rem'}}>The Web-Slinging, A**-Kicking, Community-Building Token is HERE!</h6>
                         <p className='text-black' style={{lineHeight:'1.5rem'}}>$Spoder is the hottest meme token in ERC-20 that’s hyper-deflationary, product & community driven, and designed to reward long-term hodlers.</p>
                         <h6 className='pt-4'>Launching in</h6>
@@ -658,23 +658,23 @@ function WealthMountain() {
                 </CardDeck>
             </Container>
 
-            <div className='main-content'>
+            <div className='main-content pb-8'>
                 <Container className="pt-3">
                     <div>
                         <div className='title1 text-center'>
                             Avengurs
                         </div>
-                        <div style={{display:'flex', justifyContent:'space-between'}}>
-                            <img src={spider1} alt='spider1'/>
-                            <img src={spider2} alt='spider1'/>
-                            <img src={spider3} alt='spider1'/>
-                            <img src={spider4} alt='spider1'/>
+                        <div className='flex justify-between flex-wrap'>
+                            <img className='spide-img' src={spider1} alt='spider1'/>
+                            <img className='spide-img' src={spider2} alt='spider2'/>
+                            <img className='spide-img' src={spider3} alt='spider3'/>
+                            <img className='spide-img' src={spider4} alt='spider4'/>
                         </div>
-                        <div style={{display:'flex', justifyContent:'space-between'}}>
-                            <img src={spider5} alt='spider1'/>
-                            <img src={spider6} alt='spider1'/>
-                            <img src={spider7} alt='spider1'/>
-                            <img src={spider8} alt='spider1'/>
+                        <div className='flex justify-between flex-wrap'>
+                            <img className='spide-img' src={spider5} alt='spider5'/>
+                            <img className='spide-img' src={spider6} alt='spider6'/>
+                            <img className='spide-img' src={spider7} alt='spider7'/>
+                            <img className='spide-img' src={spider8} alt='spider8'/>
                         </div>
                     </div>
                     <div>
@@ -684,26 +684,25 @@ function WealthMountain() {
                         <div className="text-center">
                             Making the world a better place, one <span className='font-weight-bold'>$SPODER</span> at a time! 
                         </div>
-                        <div style={{display:'flex'}}>
-                            <div style={{alignSelf:'center'}}>
-                                <div className='title1 text-left'>
-                                    LITILITY
+                        <div className='plain flex-revert'>
+                            <div className='text-container' style={{alignSelf:'center'}}>
+                                <div className='title2 text-left'>
+                                    UTILITY
                                 </div>
                                 <div className="text-left">
                                     The $Spoder token is the main currency in the SPODERMAN platform. Holders of the token can partake in governance, staking, gaming, and purchasing products within the Spoderverse.
                                 </div>
                             </div>
-                            <div>
+                            <div className='image-container'>
                                 <img src={spoder2Img}/>
-                                
                             </div>
                         </div>
-                        <div style={{display:'flex'}}>
-                            <div>
+                        <div className='plain'>
+                            <div className='image-container'>
                                 <img src={spodercowImg}/>
                             </div>
-                            <div style={{alignSelf:'center'}}>
-                                <div className='title1 text-right'>
+                            <div className='text-container' style={{alignSelf:'center'}}>
+                                <div className='title2 text-right'>
                                     HyperDEFLATIONARY
                                 </div>
                                 <div className="text-right">
@@ -711,16 +710,16 @@ function WealthMountain() {
                                 </div>
                             </div>
                         </div>
-                        <div style={{display:'flex'}}>
-                            <div style={{alignSelf:'center'}}>
-                                <div className='title1 text-left'>
+                        <div className='plain flex-revert'>
+                            <div className='text-container' style={{alignSelf:'center'}}>
+                                <div className='title2 text-left'>
                                     Community
                                 </div>
                                 <div className="text-left">
                                     We believe that the world is a happier place with memes in it. All the time we’ve been talking about building a community, but what’s our community without one of the most recognizable memes of all time? Your friendly neighborhood SPODERMAN is proud to provide charitable support to Doges through our partner, Second Chance Animal Rescue Society (SCARS).
                                 </div>
                             </div>
-                            <div>
+                            <div className='image-container'>
                                 <img src={spoder_dogImg}/>
                             </div>
                         </div>
@@ -732,16 +731,16 @@ function WealthMountain() {
                         <div className="text-center">
                             Spoderman Superhero Products
                         </div>
-                        <div style={{display:'flex'}}>
-                            <div style={{alignSelf:'center'}}>
-                                <div className='title1 text-left'>
+                        <div className='plain flex-revert'>
+                            <div className='text-container' style={{alignSelf:'center'}}>
+                                <div className='title2 text-left'>
                                     SPODERWEB 3.0
                                 </div>
                                 <div className="text-left">
                                     The upcoming SPODERMAN WEB3 Platforms aims to make exchanging, trading, gaming, staking, and lotteries easier for members of our community. The diversity of sources that SPODERMAN will open to unlocks a pool of opportunities for valuable growth, especially when you combine it with easy-to-use UI, compelling design, high demand functions, and top levels of security.
                                 </div>
                             </div>
-                            <div>
+                            <div className='image-container'>
                                 <img src={spoderleftHeader}/>
                             </div>
                         </div>
@@ -759,11 +758,11 @@ function WealthMountain() {
                             <img src={spoder3} alt='spoder1'/>
                             <img src={spoder4} alt='spoder1'/>
                         </div>
-                        <div style={{display:'flex'}}>
-                            <div>
-                                <img src={spoderHeartImg}/>
+                        <div className='plain'>
+                            <div className='image-container'>
+                                <img src={spoderHeartImg} style={{maxWidth:'-webkit-fill-available'}}/>
                             </div>
-                            <div style={{alignSelf:'center'}}>
+                            <div className='text-container' style={{alignSelf:'center'}}>
                                 <div className='title1 text-left'>
                                     Spodersense
                                 </div>
@@ -780,6 +779,37 @@ function WealthMountain() {
                         <div className="text-center">
                             <span className='font-weight-bold'>$SPODER</span> MASTERPLAN
                         </div>
+                        <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-between'>
+                            <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                <div className="text-center title2">Phase 1</div>
+                                <div className="text-center ">Airdrop, Launch, and Listing - Catching the Crypto Web</div>
+                                <ul className="list-disc ml-4">
+                                   <li>Airdrop Extravaganza</li> 
+                                   <li>Airdrop(Techrate)</li> 
+                                   <li>Token Launch Spodey-Style</li> 
+                                   <li>Fast Track Listing in Coingeko and CoinMarketCap</li>
+                                   <li>Contract Renouncement</li>
+                                </ul>
+                            </div>
+                            <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                <div className="text-center title2">Phase 2</div>
+                                <div className="text-center">SpoderWeb3.0 Development Building the Ultimate Web-Slinging Platform</div>
+                                <ul className="list-disc ml-4">
+                                   <li>Spin(Develop) a Seamless SpoderWeb3.0</li> 
+                                   <li>Secure the SpoderWeb3.0</li>
+                                   <li>SpoderWeb 3.0 Hype</li> 
+                                 </ul>
+                            </div>
+                            <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                <div className="text-center title2">Phase 3</div>
+                                <div className="text-center">SpoderVerse and SpoderSense Development - Unleashing Superpowers</div>
+                                <ul className="list-disc ml-4">
+                                   <li>Spin (Develop) a Seamless SpoderWeb3.0</li> 
+                                   <li>Tingle the SpoderSense</li>
+                                   <li>Superhero-level Marketing</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div className='title1 text-center'>
@@ -787,6 +817,32 @@ function WealthMountain() {
                         </div>
                         <div className="text-center">
                             <span className='font-weight-bold'>BUY & SELL TAX 5%</span> (2% Reflection to all holders, 2% BURN, 1% BUYBACK)
+                        </div>
+                        <div className='flex flex-wrap gap-4 justify-center md:justify-between mt-4 '>
+                            <div className='flex flex-col max-w-[100px]'>
+                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>1%</div>
+                                <div>Airdrop</div>
+                            </div>
+                            <div className='flex flex-col max-w-[100px]'>
+                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>5%</div>
+                                <div>CEX</div>
+                            </div>
+                            <div className='flex flex-col max-w-[100px]'>
+                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>40%</div>
+                                <div>Spoderweb 3.0 TVL</div>
+                            </div>
+                            <div className='flex flex-col max-w-[100px]'>
+                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>40%</div>
+                                <div>Liquidity</div>
+                            </div>
+                            <div className='flex flex-col max-w-[100px]'>
+                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>4%</div>
+                                <div>Developers Wallet</div>
+                            </div>
+                            <div className='flex flex-col max-w-[100px]'>
+                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>10%</div>
+                                <div>Marketing Wallet</div>
+                            </div>
                         </div>
                     </div>
                 </Container>

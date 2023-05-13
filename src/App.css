@@ -17626,7 +17626,53 @@ td.rdtYear:hover {
 
 .title1 {
   color: black;
-  font-family: 'adamwarrenpro';
+  font-family: 'adamwarrenpro-bold';
   font-size: 46px;
+  padding-top: 30px;
+}
 
+.title2 {
+  color: black;
+  font-family: 'adamwarrenpro-bold';
+  font-size: 34px;
+}
+
+.spide-img {
+  max-width: 25%;
+}
+
+.plain {
+  display: flex;
+}
+
+.plain .image-container {
+  max-width: 40%;
+}
+
+.plain .text-container {
+  max-width: 50%;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .plain {
+    flex-direction: column;
+  }
+
+  .plain img {
+    max-width: 100%;
+  }
+
+  .plain .image-container {
+    max-width: 100%;
+  }
+
+  .plain .text-container {
+    max-width: 100%;
+    padding: 30px;
+  }
+
+  .flex-revert {
+    flex-direction: column-reverse;
+  }
 }
