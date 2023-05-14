@@ -427,7 +427,7 @@ function WealthMountain() {
                 </div>
             </div>
             
-            <Container className='!max-w-full md:!max-w-[90%]'>
+            <Container className='!max-w-full md:!max-w-[80%]'>
                 <CardDeck className='flex justify-between'>
                     <Card className='banner-card pt-[70px] md:!pt-[100px]'>
                         <h2 className="text-black text-uppercase font-weight-900 font-adamwarrenpro title1 !text-[30px] md:!text-[40px] text-center md:!text-left">The Amazing Spoderman</h2>
@@ -549,7 +549,7 @@ function WealthMountain() {
                         <div className="text-center leading-8 px-1 md:px-8">
                             The ultimate NFT play-to-earn platform that's powered by AI-generated NFTs. We're excited to introduce you to our latest feature, which allows you to earn tokens by staking NFTs, engaging in PVP battles, and teaming up to take down powerful bosses.
                         </div>
-                        <div className='flex justify-between pt-[48px]'>
+                        <div className='flex justify-between pt-0 md:pt-[48px]'>
                             <div class="slider">
                                 <div class="slide-track">
                                     <div class="slide"><img src={spoder1} alt='spoder1'/></div>
@@ -650,27 +650,27 @@ function WealthMountain() {
                             <span className='font-weight-bold text-black'>BUY & SELL TAX 5%</span> (2% Reflection to all holders, 2% BURN, 1% BUYBACK)
                         </div>
                         <div className='flex flex-wrap gap-4 justify-center md:justify-between mt-4 pt-[24px] md:pt-[54px]'>
-                            <div className='flex flex-col max-w-[100px]'>
+                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
                                 <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>1%</div>
                                 <div className="text-center pt-2">Airdrop</div>
                             </div>
-                            <div className='flex flex-col max-w-[100px]'>
+                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
                                 <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>5%</div>
                                 <div className="text-center pt-2">CEX</div>
                             </div>
-                            <div className='flex flex-col max-w-[100px]'>
+                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
                                 <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>40%</div>
                                 <div className="text-center pt-2">Spoderweb 3.0 TVL</div>
                             </div>
-                            <div className='flex flex-col max-w-[100px]'>
+                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
                                 <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>40%</div>
                                 <div className="text-center pt-2">Liquidity</div>
                             </div>
-                            <div className='flex flex-col max-w-[100px]'>
+                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
                                 <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>4%</div>
                                 <div className="text-center pt-2">Developers Wallet</div>
                             </div>
-                            <div className='flex flex-col max-w-[100px]'>
+                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
                                 <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>10%</div>
                                 <div className="text-center pt-2">Marketing Wallet</div>
                             </div>
