@@ -59,6 +59,9 @@ import spoder10 from "./assets/img/spoders/image 10.png";
 import spoder11 from "./assets/img/spoders/image 11.png";
 import spoder12 from "./assets/img/spoders/image 12.png";
 
+import googlePlayBtnImg from "./assets/icons/google_play.png"
+import appStoreBtnImg from "./assets/icons/app_store.png"
+
 
 
 // import abiDecoder from "abi-decoder";
@@ -93,14 +96,9 @@ const Item = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
     padding: '5px 20px',
-    // margin: '0px 20px',
     textAlign: 'center',
     fontSize: "16px",
-    // color: theme.palette.text.secondary,
     color: 'black',
-    // border: "solid white 2px",
-    // borderRadius: "1.25rem",
-    // background: "#000000b8",
     minWidth: '100px',
     alignSelf: 'center',
 }));
@@ -114,7 +112,6 @@ const Wrapper = styled("div")(({ theme }) => ({
     overflow: "hidden",
     boxShadow: "rgba(0, 0, 0, 0.35) 0px 2px 3px",
     borderRadius: "20px",
-    // background: theme.palette.purple.main,
     marginBottom: "24px",
     border: 'solid 1px #0e131f',
     '&:hover': {
@@ -158,203 +155,6 @@ export function shorten(str, length = 6) {
 }
 
 function WealthMountain() {
-    // const LunarHopNFTs = [
-    //     [
-    //       {
-    //         path: nft1,
-    //         name: 'Common'
-    //       },
-    //       {
-    //         properties : [
-    //           {
-    //             label: "Daily Return",
-    //             value: 2,
-    //           },
-    //           {
-    //             label: "Price",
-    //             value: 50,
-    //           },
-    //           {
-    //             label: "Life Span",
-    //             value: 30,
-    //           },
-    //           {
-    //             label: "Total Income",
-    //             value: 60,
-    //           }
-    //         ]
-    //       },
-    //     ],
-    //     [
-    //         {
-    //           path: nft2,
-    //           name: 'Uncommon'
-    //         },
-    //         {
-    //           properties : [
-    //             {
-    //               label: "Daily Return",
-    //               value: 4.2,
-    //             },
-    //             {
-    //               label: "Price",
-    //               value: 100,
-    //             },
-    //             {
-    //               label: "Life Span",
-    //               value: 30,
-    //             },
-    //             {
-    //               label: "Total Income",
-    //               value: 126,
-    //             }
-    //           ]
-    //         },
-    //     ],
-    //     [
-    //         {
-    //           path: nft3,
-    //           name: 'Rare'
-    //         },
-    //         {
-    //           properties : [
-    //             {
-    //               label: "Daily Return",
-    //               value: 22,
-    //             },
-    //             {
-    //               label: "Price",
-    //               value: 500,
-    //             },
-    //             {
-    //               label: "Life Span",
-    //               value: 45,
-    //             },
-    //             {
-    //               label: "Total Income",
-    //               value: 990,
-    //             }
-    //           ]
-    //         },
-    //     ],
-    //     [
-    //         {
-    //           path: nft4,
-    //           name: 'Super Rare'
-    //         },
-    //         {
-    //           properties : [
-    //             {
-    //               label: "Daily Return",
-    //               value: 45,
-    //             },
-    //             {
-    //               label: "Price",
-    //               value: 1000,
-    //             },
-    //             {
-    //               label: "Life Span",
-    //               value: 45,
-    //             },
-    //             {
-    //               label: "Total Income",
-    //               value: 2025,
-    //             }
-    //           ]
-    //         },
-    //     ],
-    //     [
-    //       {
-    //         path: nft5,
-    //         name: 'Legendary'
-    //       },
-    //       {
-    //         properties : [
-    //           {
-    //             label: "Daily Return",
-    //             value: 235,
-    //           },
-    //           {
-    //             label: "Price",
-    //             value: 5000,
-    //           },
-    //           {
-    //             label: "Life Span",
-    //             value: 60,
-    //           },
-    //           {
-    //             label: "Total Income",
-    //             value: 14100,
-    //           }
-    //         ]
-    //       },
-    //     ],
-    //     [
-    //         {
-    //           path: nft6,
-    //           name: 'Mytical'
-    //         },
-    //         {
-    //           properties : [
-    //             {
-    //               label: "Daily Return",
-    //               value: 480,
-    //             },
-    //             {
-    //               label: "Price",
-    //               value: 10000,
-    //             },
-    //             {
-    //               label: "Life Span",
-    //               value: 60,
-    //             },
-    //             {
-    //               label: "Total Income",
-    //               value: 28800,
-    //             }
-    //           ]
-    //         },
-    //     ],
-    // ];
-
-    const faqData = [
-        {
-          title: `What is Lunar Hop?`,
-          content: 
-            <p>
-                Lunar Hop NFTs were blended into the creation as it attracts you bring luck today and in the future. The more Lunar Hop NFT you have, the greater wealth you will attract.
-            </p>
-        },
-        {
-            title: `Who can own Lunar Hop NFT?`,
-            content: 
-              <p>
-                You, me or anyone from around the globe can own Lunar Hop NFT. Anyone deserves to prosper and earn good luck for infinite wealth.
-              </p>
-        },
-        {
-            title: `What is Lunar Hop Miner?`,
-            content: 
-              <p>
-                The Lunar Hop Miner is the primary staking platform that provide users an opportunity to collect and earn good fortune over time.
-              </p>
-        },
-        {
-            title: `How do I get in touch with the team?`,
-            content: 
-              <p>
-                 Follow us on Instagram, Twitter, and Discord for more updates and announcements.
-              </p>
-        } 
-    ];
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 0,
-        slidesToScroll: 1
-    };
 
     const [sliderValue, setSliderValue] = useState('50');
     const [dropdownOpen, setOpen] = React.useState(false);
@@ -433,24 +233,24 @@ function WealthMountain() {
         };
     }
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         try {
-    //             const data = getCountdown(1674349200);
-    //             setCountdown({
-    //                 alive: data.total > 0,
-    //                 days: data.days,
-    //                 hours: data.hours,
-    //                 minutes: data.minutes,
-    //                 seconds: data.seconds
-    //             })
-    //         } catch (err) {
-    //             console.log(err);
-    //         }
-    //     }, 1000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            try {
+                const data = getCountdown(1684195200);
+                setCountdown({
+                    alive: data.total > 0,
+                    days: data.days,
+                    hours: data.hours,
+                    minutes: data.minutes,
+                    seconds: data.seconds
+                })
+            } catch (err) {
+                console.log(err);
+            }
+        }, 1000);
 
-    //     return () => clearInterval(interval);
-    // }, [userInfo])
+        return () => clearInterval(interval);
+    }, [])
 
 
     const handleChange = (e, value) => {
@@ -548,7 +348,7 @@ function WealthMountain() {
                         </div>
                         <div style={{ flex: 1 }}></div>
                         <Button
-                            className='custom-button connect-button'
+                            className='custom-button connect-button !text-[13px]'
                             >
                             JOIN AIRDROP
                         </Button>
@@ -615,7 +415,7 @@ function WealthMountain() {
                 <Button
                     className='custom-button connect-button desktop-button'
                     >
-                    JOIN AIRDROP2
+                    JOIN AIRDROP
                 </Button>
                 <div
                     className='mobile_btn'
@@ -634,7 +434,7 @@ function WealthMountain() {
                         <h6 className='text-black font-weight-bold leading-8'>The Web-Slinging, A**-Kicking, Community-Building Token is HERE!</h6>
                         <p className='text-black leading-8'>$Spoder is the hottest meme token in ERC-20 that’s hyper-deflationary, product & community driven, and designed to reward long-term hodlers.</p>
                         <h6 className='pt-4 text-black'>Launching in</h6>
-                        <div className='text-red text-[28px] font-weight-bold pb-4'>05D : 18H : 5M: 59S</div>
+                        <div className='text-red text-[28px] font-weight-bold pb-4'>{countdown.alive ? countdown.days + 'D : ' + countdown.hours + "H : " + countdown.minutes + "M : " + (countdown.seconds > 10 ? countdown.seconds : "0" + countdown.seconds) + "S " : ""}</div>
                         <div className='flex gap-3'>
                             <Button
                                 className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px]'>
@@ -733,6 +533,9 @@ function WealthMountain() {
                                 <div className="text-left">
                                     The upcoming SPODERMAN WEB3 Platforms aims to make exchanging, trading, gaming, staking, and lotteries easier for members of our community. The diversity of sources that SPODERMAN will open to unlocks a pool of opportunities for valuable growth, especially when you combine it with easy-to-use UI, compelling design, high demand functions, and top levels of security.
                                 </div>
+                                <Button className='connect-button custom-button mt-4'>
+                                    LAUNCH DAPP
+                                </Button>
                             </div>
                             <div className='image-container'>
                                 <img src={spoderleftHeader}/>
@@ -776,8 +579,11 @@ function WealthMountain() {
                                 </div>
                             </div>
                         </div>
-                        <div className='pt-[48px] mx-auto flex'>
-                            Comming Soon
+                        <div className='flex flex-row justify-center'>
+                            <Button
+                                className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px] !bg-white'>
+                                COMING SOON
+                            </Button>
                         </div>
                         <div className='plain pt-[80px]'>
                             <div className='image-container'>
@@ -789,6 +595,10 @@ function WealthMountain() {
                                 </div>
                                 <div className="md:text-left text-center leading-8">
                                     A powerful app that provides real-time signals for buying and selling cryptocurrency. Whether you're an experienced trader or a newbie to the crypto scene, SpoderSense can help you make informed decisions and maximize your profits by taking advantage of effective trading tools and new technology, integrated with insights of the SPODERMAN community.
+                                </div>
+                                <div className='flex gap-4 mt-4'>
+                                    <img src={googlePlayBtnImg} className='w-[140px]'/>
+                                    <img src={appStoreBtnImg} className='w-[140px]'/>
                                 </div>
                             </div>
                         </div>
