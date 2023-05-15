@@ -429,11 +429,11 @@ function WealthMountain() {
             
             <Container className='!max-w-full md:!max-w-[80%]'>
                 <CardDeck className='flex justify-between'>
-                    <Card className='banner-card pt-[70px] md:!pt-[100px]'>
+                    <Card className='banner-card pt-[70px] md:!pt-[100px] text-center md:text-left'>
                         <h2 className="text-black text-uppercase font-weight-900 font-adamwarrenpro title1 !text-[30px] md:!text-[40px] text-center md:!text-left">The Amazing Spoderman</h2>
-                        <h6 className='text-black font-weight-bold leading-8'>The Web-Slinging, A**-Kicking, Community-Building Token is HERE!</h6>
-                        <p className='text-black leading-8'>$Spoder is the hottest meme token in ERC-20 that’s hyper-deflationary, product & community driven, and designed to reward long-term hodlers.</p>
-                        <h6 className='pt-4 text-black'>Launching in</h6>
+                        <h6 className='text-black font-weight-bold leading-8 text-center md:text-left'>The Web-Slinging, A**-Kicking, Community-Building Token is HERE!</h6>
+                        <p className='text-black leading-8 text-center md:text-left'>$Spoder is the hottest meme token in ERC-20 that’s hyper-deflationary, product & community driven, and designed to reward long-term hodlers.</p>
+                        <h5 className='pt-4 text-black font-bold'>Launching in</h5>
                         <div className='text-red text-[28px] font-weight-bold pb-4'>{countdown.alive ? countdown.days + 'D : ' + countdown.hours + "H : " + countdown.minutes + "M : " + (countdown.seconds > 10 ? countdown.seconds : "0" + countdown.seconds) + "S " : ""}</div>
                         <div className='flex gap-3'>
                             <Button
@@ -478,12 +478,12 @@ function WealthMountain() {
                         <div className="text-center">
                             Making the world a better place, one <span className='font-weight-bold'>$SPODER</span> at a time! 
                         </div>
-                        <div className='plain flex-revert pt-[54px]'>
-                            <div className='text-container' style={{alignSelf:'center'}}>
-                                <div className='title2 text-left'>
+                        <div className='plain flex-revert pt-[54px] text-center md:text-left'>
+                            <div className='text-container self:center'>
+                                <div className='title2'>
                                     UTILITY
                                 </div>
-                                <div className="text-left leading-8">
+                                <div className="leading-8">
                                     The $Spoder token is the main currency in the SPODERMAN platform. Holders of the token can partake in governance, staking, gaming, and purchasing products within the Spoderverse.
                                 </div>
                             </div>
@@ -491,25 +491,25 @@ function WealthMountain() {
                                 <img src={spoder2Img}/>
                             </div>
                         </div>
-                        <div className='plain pt-[30px] md:pt-[80px]'>
+                        <div className='plain pt-[30px] md:pt-[80px] text-center md:text-right'>
                             <div className='image-container'>
                                 <img src={spodercowImg}/>
                             </div>
                             <div className='text-container' style={{alignSelf:'center'}}>
-                                <div className='title2 text-right'>
+                                <div className='title2'>
                                     HyperDEFLATIONARY
                                 </div>
-                                <div className="text-right leading-8">
+                                <div className="leading-8">
                                     Through our SPODERVERSE products, HYPERdeflationary mechanisms will be put in place to encourage higher value setting of the token and its utility, incentivizing long-term hodlers.
                                 </div>
                             </div>
                         </div>
-                        <div className='plain flex-revert pt-[30px] md:pt-[80px]'>
+                        <div className='plain flex-revert pt-[30px] md:pt-[80px] text-center md:text-left'>
                             <div className='text-container' style={{alignSelf:'center'}}>
-                                <div className='title2 text-left'>
+                                <div className='title2'>
                                     Community
                                 </div>
-                                <div className="text-left leading-8">
+                                <div className="leading-8">
                                     We believe that the world is a happier place with memes in it. All the time we’ve been talking about building a community, but what’s our community without one of the most recognizable memes of all time? Your friendly neighborhood SPODERMAN is proud to provide charitable support to Doges through our partner, Second Chance Animal Rescue Society (SCARS).
                                 </div>
                             </div>
@@ -525,12 +525,12 @@ function WealthMountain() {
                         <div className="text-center">
                             Spoderman Superhero Products
                         </div>
-                        <div className='plain flex-revert pt-[54px] leading-8'>
+                        <div className='plain flex-revert pt-[54px] leading-8 text-center md:text-left'>
                             <div className='text-container' style={{alignSelf:'center'}}>
-                                <div className='title2 text-left pb-4'>
+                                <div className='title2 pb-4'>
                                     SPODERWEB 3.0
                                 </div>
-                                <div className="text-left">
+                                <div>
                                     The upcoming SPODERMAN WEB3 Platforms aims to make exchanging, trading, gaming, staking, and lotteries easier for members of our community. The diversity of sources that SPODERMAN will open to unlocks a pool of opportunities for valuable growth, especially when you combine it with easy-to-use UI, compelling design, high demand functions, and top levels of security.
                                 </div>
                                 <Button className='connect-button custom-button mt-4'>
