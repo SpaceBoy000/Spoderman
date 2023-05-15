@@ -245,16 +245,15 @@ body {
   line-height: 1.5;
   color: #525f7f;
   text-align: left;
-  /* background: url('./assets/img/bg.jpg'); */
-  /* background: #495057; */
-  /* background: linear-gradient(180deg, #D74041 0%, #BA1114 100%); */
 
-  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(0)" opacity="0.2" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"></g></svg>'), white;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(0)" opacity="0.2" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'), white;
+  background-size: 10px, 100%;
 
-  background-size: cover!important;
-  background-repeat: no-repeat!important;
-  background-position: center top!important;
-  background-attachment: fixed!important;
+
+  /* background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(0)" opacity="0.2" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"></g></svg>'), red;
+  background-size: 10px, 100%;
+  width: 100%;
+  min-height: 100vh; */
 }
 
 [tabindex="-1"]:focus {
@@ -17468,6 +17467,12 @@ td.rdtYear:hover {
   padding: 20px 30px;
 }
 
+.banner-card img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
 .nft-card {
   min-width: 250px;
   margin: 10px;
@@ -17645,6 +17650,10 @@ td.rdtYear:hover {
 .spider-img {
   max-width: 25%;
   padding: 10px;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .plain {
@@ -17652,12 +17661,18 @@ td.rdtYear:hover {
 }
 
 .plain .image-container {
-  max-width: 40%;
+  max-width: 50%;
 }
 
 .plain .text-container {
   max-width: 50%;
   padding: 30px;
+}
+
+.plain img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -17738,6 +17753,10 @@ td.rdtYear:hover {
   place-items: center;
   transition:0.5s;
   cursor:pointer;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 .slide:hover{
   transform:scale(0.8)
@@ -17769,4 +17788,10 @@ td.rdtYear:hover {
       transform: translateX(calc(-80px * 10));
     }
   }
+}
+
+.select-disable {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
