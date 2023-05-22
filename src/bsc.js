@@ -166,7 +166,7 @@ export function shorten(str, length = 6) {
     return `${str.slice(0, length)}...${str.slice(str.length - 4)}`;
 }
 
-function WealthMountain() {
+function Spoderman() {
 
     const section1 = useScrollSection('section1');
     const section2 = useScrollSection('section2');
@@ -215,11 +215,11 @@ function WealthMountain() {
     ];
 
     const socials = [
-        {link: '/', label: 'twitter', pic: twitterIcon},
-        {link: '/', label: 'telegram', pic: telIcon},
-        {link: '/', label: 'telegram', pic: telIcon},
-        {link: '/', label: 'discord', pic: discordIcon},
-        {link: '/', label: 'instagram', pic: insIcon},
+        {link: 'https://twitter.com/', label: 'twitter', pic: twitterIcon},
+        {link: 'https://t.me/', label: 'telegram', pic: telIcon},
+        {link: 'https://t.me/', label: 'telegram', pic: telIcon},
+        {link: 'https://discord.com/', label: 'discord', pic: discordIcon},
+        {link: 'https://instagram.com/', label: 'instagram', pic: insIcon},
     ]
 
     const onChangeAuditNo = (value) => {
@@ -343,7 +343,7 @@ function WealthMountain() {
                             <img src="./favicon.png" alt="ETH Snowball" height="64px" />
                         </div>
                         <div className="mobile_four_btn">
-                            <div onClick={() => { setMobile(true); section1.onClick() }} selected={section1.selected}>
+                            <div onClick={() => { setMobile(true); section1.onClick() }} selected={section1.selected} className='font-bold'>
                                 Spoderverse
                             </div>
                             <div onClick={() => {
@@ -355,7 +355,7 @@ function WealthMountain() {
                                     <span>Webpaper</span>
                                 </a>
                             </div>
-                            <div onClick={() => { setMobile(true); section2.onClick() }} selected={section2.selected}>
+                            <div onClick={() => { setMobile(true); section2.onClick() }} selected={section2.selected} className='font-bold'>
                                 <span>Roadmap</span>
                             </div>
                         </div>
@@ -436,8 +436,8 @@ function WealthMountain() {
                             </Button>
                         </div>
                     </Card>
-                    <Card className="banner-card">
-                        <img src={ spoder1Img } alt="..." className='max-w-[500px]'/>
+                    <Card className="banner-card flex flex-row justify-end">
+                        <img src={ spoder1Img } alt="..." className='max-w-[500px] w-full'/>
                     </Card>
                 </CardDeck>
             </Container>
@@ -448,13 +448,13 @@ function WealthMountain() {
                         <div className='title1 text-center'>
                             Avengurs
                         </div>
-                        <div className='flex justify-between flex-wrap pt-[20px] md:pt-[54px]'>
+                        <div className='flex justify-between flex-wrap pt-[20px] md:pt-[54px] px-8'>
                             <img className='spider-img' src={spider1} alt='spider1'/>
                             <img className='spider-img' src={spider2} alt='spider2'/>
                             <img className='spider-img' src={spider3} alt='spider3'/>
                             <img className='spider-img' src={spider4} alt='spider4'/>
                         </div>
-                        <div className='flex justify-between flex-wrap pt-[20px] md:pt-[54px]'>
+                        <div className='flex justify-between flex-wrap pt-[20px] md:pt-[54px] px-8'>
                             <img className='spider-img' src={spider5} alt='spider5'/>
                             <img className='spider-img' src={spider6} alt='spider6'/>
                             <img className='spider-img' src={spider7} alt='spider7'/>
@@ -469,7 +469,7 @@ function WealthMountain() {
                             Making the world a better place, one <span className='font-weight-bold'>$SPODER</span> at a time! 
                         </div>
                         <div className='plain flex-revert pt-[54px] text-center md:text-left'>
-                            <div className='text-container self:center'>
+                            <div className='text-container self-center'>
                                 <div className='title2'>
                                     UTILITY
                                 </div>
@@ -477,7 +477,7 @@ function WealthMountain() {
                                     The $Spoder token is the main currency in the SPODERMAN platform. Holders of the token can partake in governance, staking, gaming, and purchasing products within the Spoderverse.
                                 </div>
                             </div>
-                            <div className='image-container'>
+                            <div className='image-container justify-end'>
                                 <img src={spoder2Img}/>
                             </div>
                         </div>
@@ -503,7 +503,7 @@ function WealthMountain() {
                                     We believe that the world is a happier place with memes in it. All the time we’ve been talking about building a community, but what’s our community without one of the most recognizable memes of all time? Your friendly neighborhood SPODERMAN is proud to provide charitable support to Doges through our partner, Second Chance Animal Rescue Society (SCARS).
                                 </div>
                             </div>
-                            <div className='image-container'>
+                            <div className='image-container justify-end'>
                                 <img src={spoder_dogImg}/>
                             </div>
                         </div>
@@ -527,7 +527,7 @@ function WealthMountain() {
                                     LAUNCH DAPP
                                 </Button>
                             </div>
-                            <div className='image-container'>
+                            <div className='image-container justify-end'>
                                 <img src={spoderleftHeader}/>
                             </div>
                         </div>
@@ -588,8 +588,8 @@ function WealthMountain() {
                                         A powerful app that provides real-time signals for buying and selling cryptocurrency. Whether you're an experienced trader or a newbie to the crypto scene, SpoderSense can help you make informed decisions and maximize your profits by taking advantage of effective trading tools and new technology, integrated with insights of the SPODERMAN community.
                                     </div>
                                     <div className='flex gap-4 mt-4'>
-                                        <img src={googlePlayBtnImg} className='w-[140px]'/>
-                                        <img src={appStoreBtnImg} className='w-[140px]'/>
+                                        <img src={googlePlayBtnImg} className='w-[140px] cursor-pointer'/>
+                                        <img src={appStoreBtnImg} className='w-[140px] cursor-pointer'/>
                                     </div>
                                 </div>
                             </div>
@@ -602,9 +602,9 @@ function WealthMountain() {
                         <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-between text-black items-center'>
                             {
                                 audits.map((item, index) => 
-                                <div key={index}>
-                                    <img src={item.pic}/>
-                                </div>)
+                                <a href={item.link} target='_blank' alt={item.label} key={index}>
+                                    <img src={item.pic} className='cursor-pointer'/>
+                                </a>)
                             }
                         </div>
                     </div>
@@ -616,7 +616,7 @@ function WealthMountain() {
                             <div className="text-center">
                                 <b>$SPODER</b> MASTERPLAN
                             </div>
-                            <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-between text-black'>
+                            <div className='flex flex-col md:flex-row px-4 gap-8 mt-8 justify-between text-black'>
                                 <div className='flex flex-col gap-2 p-4 md:max-w-[30%] bg-white custom-shadow'>
                                     <div className="text-center title2">Phase 1</div>
                                     <div className="text-center pb-4 ">Airdrop, Launch, and Listing - Catching the Crypto Web</div>
@@ -654,7 +654,7 @@ function WealthMountain() {
                             Tokenomics
                         </div>
                         <div className="text-center">
-                            <span className='font-weight-bold text-black'>BUY & SELL TAX 5%</span> (2% Reflection to all holders, 2% BURN, 1% BUYBACK)
+                            <span className='font-weight-bold text-black'>BUY & SELL TAX 5%</span> (2% BURN, 2% LIQUIDITY, 1% BUYBACK)
                         </div>
                         <div className='flex flex-wrap gap-4 justify-center md:justify-between mt-4 pt-[24px] md:pt-[54px]'>
                             <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
@@ -670,7 +670,7 @@ function WealthMountain() {
                                 <div className="text-center pt-2">Spoderweb 3.0 TVL</div>
                             </div>
                             <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
-                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>40%</div>
+                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>45%</div>
                                 <div className="text-center pt-2">Liquidity</div>
                             </div>
                             <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
@@ -678,7 +678,7 @@ function WealthMountain() {
                                 <div className="text-center pt-2">Developers Wallet</div>
                             </div>
                             <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
-                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>10%</div>
+                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>5%</div>
                                 <div className="text-center pt-2">Marketing Wallet</div>
                             </div>
                         </div>
@@ -708,9 +708,10 @@ function WealthMountain() {
                         <div className='flex flex-row gap-2'>
                             {
                                 socials.map((item, index) => 
-                                <div>
+                                <a href={item.link} target='_blank' alt={item.label} key={index}>
                                     <img src={item.pic} alt={item.label}/>
-                                </div>)
+                                </a>
+                                )
                             }
                         </div>
                     </CardDeck>
@@ -719,4 +720,4 @@ function WealthMountain() {
         </>
     )
 }
-export default WealthMountain;
+export default Spoderman;

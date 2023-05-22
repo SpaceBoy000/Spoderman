@@ -13373,7 +13373,9 @@ td.rdtYear:hover {
 }
 
 .plain .image-container {
-  max-width: 50%;
+  /* max-width: 50%; */
+  width: 50%;
+  display: flex;
 }
 
 .plain .text-container {
@@ -13397,7 +13399,7 @@ td.rdtYear:hover {
   }
 
   .plain .image-container {
-    max-width: 100%;
+    width: 100%;
   }
 
   .plain .text-container {
