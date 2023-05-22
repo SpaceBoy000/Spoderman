@@ -248,7 +248,7 @@ function WealthMountain() {
     useEffect(() => {
         const interval = setInterval(() => {
             try {
-                const data = getCountdown(1684195200);
+                const data = getCountdown(1684905200);
                 setCountdown({
                     alive: data.total > 0,
                     days: data.days,
