@@ -220,6 +220,26 @@ function Spoderman() {
         {link: 'https://t.me/', label: 'telegram', pic: telIcon},
         {link: 'https://discord.com/', label: 'discord', pic: discordIcon},
         {link: 'https://instagram.com/', label: 'instagram', pic: insIcon},
+    ];
+
+    const spiders = [
+        {link: '', label: 'spider1', pic: spider1},
+        {link: '', label: 'spider2', pic: spider2},
+        {link: '', label: 'spider3', pic: spider3},
+        {link: '', label: 'spider4', pic: spider4},
+        {link: '', label: 'spider5', pic: spider5},
+        {link: '', label: 'spider6', pic: spider6},
+        {link: '', label: 'spider7', pic: spider7},
+        {link: '', label: 'spider8', pic: spider8},
+    ];
+
+    const tokenomics = [
+        {label: 'Airdrop', value: '1%'},
+        {label: 'CEX', value: '5%'},
+        {label: 'Spoderweb3.0 TVL', value: '40%'},
+        {label: 'Liquidity', value: '45%'},
+        {label: 'Developers Wallet', value: '4%'},
+        {label: 'Marketing Wallet', value: '5%'},
     ]
 
     const onChangeAuditNo = (value) => {
@@ -449,16 +469,13 @@ function Spoderman() {
                             Avengurs
                         </div>
                         <div className='flex justify-between flex-wrap pt-[20px] md:pt-[54px] px-8'>
-                            <img className='spider-img' src={spider1} alt='spider1'/>
-                            <img className='spider-img' src={spider2} alt='spider2'/>
-                            <img className='spider-img' src={spider3} alt='spider3'/>
-                            <img className='spider-img' src={spider4} alt='spider4'/>
-                        </div>
-                        <div className='flex justify-between flex-wrap pt-[20px] md:pt-[54px] px-8'>
-                            <img className='spider-img' src={spider5} alt='spider5'/>
-                            <img className='spider-img' src={spider6} alt='spider6'/>
-                            <img className='spider-img' src={spider7} alt='spider7'/>
-                            <img className='spider-img' src={spider8} alt='spider8'/>
+                            {
+                                spiders.map((item, index) => 
+                                    <a href={item.link} target='_blank' key={index} className='w-1/2 md:w-1/4 flex flex-row justify-center'>
+                                        <img src={item.pic} className='spider-img' alt={item.label}/>
+                                    </a>
+                                )
+                            }
                         </div>
                     </div>
                     <div className='pt-[50px] md:pt-[150px]'>
@@ -656,31 +673,13 @@ function Spoderman() {
                         <div className="text-center">
                             <span className='font-weight-bold text-black'>BUY & SELL TAX 5%</span> (2% BURN, 2% LIQUIDITY, 1% BUYBACK)
                         </div>
-                        <div className='flex flex-wrap gap-4 justify-center md:justify-between mt-4 pt-[24px] md:pt-[54px]'>
-                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
-                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>1%</div>
-                                <div className="text-center pt-2">Airdrop</div>
-                            </div>
-                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
-                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>5%</div>
-                                <div className="text-center pt-2">CEX</div>
-                            </div>
-                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
-                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>40%</div>
-                                <div className="text-center pt-2">Spoderweb 3.0 TVL</div>
-                            </div>
-                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
-                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>45%</div>
-                                <div className="text-center pt-2">Liquidity</div>
-                            </div>
-                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
-                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>4%</div>
-                                <div className="text-center pt-2">Developers Wallet</div>
-                            </div>
-                            <div className='flex flex-col w-[45%] md:w-[80px] p-2'>
-                                <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>5%</div>
-                                <div className="text-center pt-2">Marketing Wallet</div>
-                            </div>
+                        <div className='flex flex-wrap gap-4 justify-center mt-4 pt-[24px] md:pt-[54px]'>
+                            {tokenomics.map((item, index) => 
+                                <div className='flex flex-col w-[45%] md:w-[130px] p-2' key={index}>
+                                    <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>{item.value}</div>
+                                    <div className="text-center pt-2">{item.label}</div>
+                                </div>
+                            )}
                         </div>
                     </div>
                     <div className='pt-[50px] md:pt-[150px]'>
