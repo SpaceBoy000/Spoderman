@@ -619,11 +619,11 @@ function Spoderman() {
                             </div>
                         </div>
                     </Section>
-                    <div className='py-[50px] md:mt-8 px-4 bg-black'>
+                    <div className='py-[50px] md:mt-8 px-4 bg-black absolute left-0 w-full'>
                         <div className='title1 text-center text-white'>
                             AUDIT
                         </div>
-                        <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-between text-black items-center'>
+                        <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-center text-black items-center'>
                             {
                                 audits.map((item, index) => 
                                 <a href={item.link} target='_blank' alt={item.label} key={index}>
@@ -633,7 +633,7 @@ function Spoderman() {
                         </div>
                     </div>
                     <Section id='section2'>
-                        <div className='pt-[50px] md:pt-[150px]'>
+                        <div className='pt-[550px] md:pt-[350px]'>
                             <div className='title1 text-center'>
                                 ROADMAP
                             </div>
