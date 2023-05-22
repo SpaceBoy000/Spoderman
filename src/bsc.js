@@ -376,7 +376,7 @@ function WealthMountain() {
             )
             : <></>}
 
-            <div className="custom-header">
+            <div className="custom-header bg-white">
                 <img
                     alt="..."
                     src={logoImg}
@@ -617,7 +617,7 @@ function WealthMountain() {
                                 <b>$SPODER</b> MASTERPLAN
                             </div>
                             <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-between text-black'>
-                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] bg-white custom-shadow'>
                                     <div className="text-center title2">Phase 1</div>
                                     <div className="text-center pb-4 ">Airdrop, Launch, and Listing - Catching the Crypto Web</div>
                                     <ul className="list-disc ml-4 flex flex-col h-full justify-between">
@@ -628,7 +628,7 @@ function WealthMountain() {
                                     <li>Contract Renouncement</li>
                                     </ul>
                                 </div>
-                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] bg-white custom-shadow'>
                                     <div className="text-center title2">Phase 2</div>
                                     <div className="text-center pb-4">SpoderWeb3.0 Development Building the Ultimate Web-Slinging Platform</div>
                                     <ul className="list-disc ml-4 flex flex-col h-full justify-between">
@@ -637,7 +637,7 @@ function WealthMountain() {
                                     <li><b>SpoderWeb3.0</b> Hype</li> 
                                     </ul>
                                 </div>
-                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] bg-white custom-shadow'>
                                     <div className="text-center title2">Phase 3</div>
                                     <div className="text-center pb-4">SpoderVerse and SpoderSense Development - Unleashing Superpowers</div>
                                     <ul className="list-disc ml-4 flex flex-col h-full justify-between">
