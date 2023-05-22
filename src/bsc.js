@@ -653,7 +653,7 @@ function Spoderman() {
                                     <div className="text-center pb-4 ">Airdrop, Launch, and Listing - Catching the Crypto Web</div>
                                     <ul className="list-disc ml-4 flex flex-col h-full justify-between">
                                     <li>Airdrop Extravaganza</li> 
-                                    <li>Airdrop<b>(Techrate)</b></li> 
+                                    <li>Audit<b>(Techrate & The Stamp)</b></li> 
                                     <li>Token Launch Spodey-Style</li> 
                                     <li>Fast Track Listing in <b>Coingeko</b> and <b>CoinMarketCap</b></li>
                                     <li>Contract Renouncement</li>
