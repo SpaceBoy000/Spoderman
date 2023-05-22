@@ -449,16 +449,16 @@ function Spoderman() {
                         <p className='text-black leading-8 text-center md:text-left'>$Spoder is the hottest meme token in ERC-20 that’s hyper-deflationary, product & community driven, and designed to reward long-term hodlers.</p>
                         <h5 className='pt-4 text-black font-bold'>Launching in</h5>
                         <div className='text-red text-[28px] font-weight-bold pb-4'>{countdown.alive ? countdown.days + 'D : ' + countdown.hours + "H : " + countdown.minutes + "M : " + (countdown.seconds >= 10 ? countdown.seconds : "0" + countdown.seconds) + "S " : ""}</div>
-                        <div className='flex gap-3'>
+                        <div className='flex flex-col md:flex-row gap-8 md:gap-4'>
                             <a href='http://t.me/SpodermanAirdrop_Bot' target='_blank' alt='Join Airdrop'>
                                 <Button
-                                    className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px]'>
+                                    className='custom-button connect-button max-w-[50%] md:text-[16px]'>
                                     Join Airdrop
                                 </Button>
                             </a>
                             <a href='https://t.me/spodermanlol' target='_blank' alt='Join Airdrop'>
                                 <Button
-                                    className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px] !bg-white'>
+                                    className='custom-button connect-button max-w-[50%] md:text-[16px] !bg-white'>
                                     Telegram
                                 </Button>
                             </a>
@@ -630,7 +630,7 @@ function Spoderman() {
                         <div className='title1 text-center text-white'>
                             AUDIT
                         </div>
-                        <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-center text-black items-center'>
+                        <div className='flex flex-col md:flex-row px-4 gap-8 md:gap-16 mt-4 justify-center text-black items-center'>
                             {
                                 audits.map((item, index) => 
                                 <a href={item.link} target='_blank' alt={item.label} key={index}>
@@ -640,7 +640,7 @@ function Spoderman() {
                         </div>
                     </div>
                     <Section id='section2'>
-                        <div className='pt-[550px] md:pt-[350px]'>
+                        <div className='mt-[550px] md:mt-[350px]'>
                             <div className='title1 text-center'>
                                 ROADMAP
                             </div>

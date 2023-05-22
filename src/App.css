@@ -12946,7 +12946,7 @@ td.rdtYear:hover {
   /* border-radius: 20px; */
   border: solid 1px black;
   font-weight: 'bold';
-  min-width: 134px;
+  min-width: 160px;
   font-family: 'Montserrat';
   border-radius: 0px !important;
 }
@@ -13056,7 +13056,6 @@ td.rdtYear:hover {
   }
 
   .mobile_herader_content {
-    width: 60%;
     height: 100vh;
     left: 0px;
     background: black;
