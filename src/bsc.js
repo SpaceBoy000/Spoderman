@@ -58,6 +58,11 @@ import spoder10 from "./assets/img/spoders/image 10.png";
 import spoder11 from "./assets/img/spoders/image 11.png";
 import spoder12 from "./assets/img/spoders/image 12.png";
 
+import telIcon from "./assets/icons/telegram.png";
+import discordIcon from "./assets/icons/discord.png";
+import twitterIcon from "./assets/icons/twitter.png";
+import insIcon from "./assets/icons/instagram.png";
+
 import certik from "./assets/img/audit/certik.png";
 import theStamp from "./assets/img/audit/theStamp.png";
 import tech from "./assets/img/audit/tech.png";
@@ -208,6 +213,14 @@ function WealthMountain() {
         { link: '/', label: 'Audit 2', pic: theStamp },
         { link: '/', label: 'Audit 3', pic: certik },
     ];
+
+    const socials = [
+        {link: '/', label: 'twitter', pic: twitterIcon},
+        {link: '/', label: 'telegram', pic: telIcon},
+        {link: '/', label: 'telegram', pic: telIcon},
+        {link: '/', label: 'discord', pic: discordIcon},
+        {link: '/', label: 'instagram', pic: insIcon},
+    ]
 
     const onChangeAuditNo = (value) => {
         console.log("onChangeAuditNo value=", value); //, " : ", audits[value].link);
@@ -582,7 +595,7 @@ function WealthMountain() {
                             </div>
                         </div>
                     </Section>
-                    <div className='py-[50px] px-4 bg-black'>
+                    <div className='py-[50px] md:mt-8 px-4 bg-black'>
                         <div className='title1 text-center text-white'>
                             AUDIT
                         </div>
@@ -593,7 +606,6 @@ function WealthMountain() {
                                     <img src={item.pic}/>
                                 </div>)
                             }
-                            
                         </div>
                     </div>
                     <Section id='section2'>
@@ -685,17 +697,25 @@ function WealthMountain() {
                 </Container>
             </div>
             
-            {/* <div className="pt-3 text-center calvino text-lightblue">
-                <Card style={{ borderRadius: '0px', padding: '40px 10px 30px 10px' }}>
-                    <CardDeck className="custom-footer">
-                        <a href={scanLinkSuffix + wealthContract} target="_blank" rel="noreferrer"> CONTRACT </a>
-                        <a href="/hopdoc.pdf" target="_blank" rel="noreferrer"> HOP PAPER </a>
-                        <a href="https://twitter.com/lunar_hop" target="_blank" rel="noreferrer"> TWITTER </a>
-                        <a href="https://t.me/Lunarhop" target="_blank" rel="noreferrer"> TELEGRAM </a>
+            <div className="pt-3 text-center calvino text-lightblue">
+                {/* <Card style={{ borderRadius: '0px', padding: '40px', display:'flex', flexDirection:'row', alignItems:'center'}}> */}
+                <Card className='rounded-0 py-4 md:px-8 gap-4 flex !flex-col-reverse md:!flex-row justify-between items-center'>
+                    <CardDeck className='!mx-0'>
+                        SPODERMAN.LOL @ 2023
                     </CardDeck>
-                    <p style={{ fontSize: '16px', color: 'white', paddingTop: '30px', fontWeight: 'bold' }}>© Luner Hop Team , All Rights Reserved</p>
+                    <CardDeck className="flex flex-col custom-footer items-center pb-4 md:pb-0 !mx-0">
+                        <div className='pb-4 md:pb-0 md:pr-4 text-[20px]'>Join our Community</div>
+                        <div className='flex flex-row gap-2'>
+                            {
+                                socials.map((item, index) => 
+                                <div>
+                                    <img src={item.pic} alt={item.label}/>
+                                </div>)
+                            }
+                        </div>
+                    </CardDeck>
                 </Card>
-            </div> */}
+            </div>
         </>
     )
 }
