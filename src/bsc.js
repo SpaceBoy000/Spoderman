@@ -45,6 +45,7 @@ import spider6 from "./assets/img/spiders/spider 6.png";
 import spider7 from "./assets/img/spiders/spider 7.png";
 import spider8 from "./assets/img/spiders/spider 8.png";
 
+import spoder0 from "./assets/img/spoders/image.png";
 import spoder1 from "./assets/img/spoders/image 1.png";
 import spoder2 from "./assets/img/spoders/image 2.png";
 import spoder3 from "./assets/img/spoders/image 3.png";
@@ -53,10 +54,10 @@ import spoder5 from "./assets/img/spoders/image 5.png";
 import spoder6 from "./assets/img/spoders/image 6.png";
 import spoder7 from "./assets/img/spoders/image 7.png";
 import spoder8 from "./assets/img/spoders/image 8.png";
-import spoder9 from "./assets/img/spoders/image 9.png";
-import spoder10 from "./assets/img/spoders/image 10.png";
-import spoder11 from "./assets/img/spoders/image 11.png";
-import spoder12 from "./assets/img/spoders/image 12.png";
+// import spoder9 from "./assets/img/spoders/image 9.png";
+// import spoder10 from "./assets/img/spoders/image 10.png";
+// import spoder11 from "./assets/img/spoders/image 11.png";
+// import spoder12 from "./assets/img/spoders/image 12.png";
 
 import telIcon from "./assets/icons/telegram.png";
 import discordIcon from "./assets/icons/discord.png";
@@ -215,11 +216,11 @@ function Spoderman() {
     ];
 
     const socials = [
-        {link: 'https://twitter.com/', label: 'twitter', pic: twitterIcon},
-        {link: 'https://t.me/', label: 'telegram', pic: telIcon},
-        {link: 'https://t.me/', label: 'telegram', pic: telIcon},
-        {link: 'https://discord.com/', label: 'discord', pic: discordIcon},
-        {link: 'https://instagram.com/', label: 'instagram', pic: insIcon},
+        {link: 'https://twitter.com/Spodermanlol', label: 'twitter', pic: twitterIcon},
+        {link: 'https://t.me/spodermanlol', label: 'telegram', pic: telIcon},
+        {link: 'https://t.me/spodermanlolchat', label: 'telegram', pic: telIcon},
+        {link: 'https://discord.gg/46bPadV5QM', label: 'discord', pic: discordIcon},
+        {link: 'https://www.instagram.com/spoderman.lol/', label: 'instagram', pic: insIcon},
     ];
 
     const spiders = [
@@ -540,8 +541,12 @@ function Spoderman() {
                                 <div>
                                     The upcoming SPODERMAN WEB3 Platforms aims to make exchanging, trading, gaming, staking, and lotteries easier for members of our community. The diversity of sources that SPODERMAN will open to unlocks a pool of opportunities for valuable growth, especially when you combine it with easy-to-use UI, compelling design, high demand functions, and top levels of security.
                                 </div>
-                                <Button className='connect-button custom-button mt-4'>
+                                {/* <Button className='connect-button custom-button mt-4'>
                                     LAUNCH DAPP
+                                </Button> */}
+                                <Button
+                                    className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px] !bg-white mt-4'>
+                                    COMING SOON
                                 </Button>
                             </div>
                             <div className='image-container justify-end p-8 md:p-12'>
@@ -560,6 +565,7 @@ function Spoderman() {
                             <div className='flex justify-between pt-0 md:pt-[48px]'>
                                 <div class="slider">
                                     <div class="slide-track">
+                                        <div class="slide"><img src={spoder0} alt='spoder0'/></div>
                                         <div class="slide"><img src={spoder1} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder2} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder3} alt='spoder1'/></div>
@@ -568,10 +574,11 @@ function Spoderman() {
                                         <div class="slide"><img src={spoder6} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder7} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder8} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder9} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder10} alt='spoder1'/></div>
+                                        {/* <div class="slide"><img src={spoder9} alt='spoder1'/></div> */}
+                                        {/* <div class="slide"><img src={spoder10} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder11} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder12} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder12} alt='spoder1'/></div> */}
+                                        <div class="slide"><img src={spoder0} alt='spoder0'/></div>
                                         <div class="slide"><img src={spoder1} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder2} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder3} alt='spoder1'/></div>
@@ -580,10 +587,10 @@ function Spoderman() {
                                         <div class="slide"><img src={spoder6} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder7} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder8} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder9} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder10} alt='spoder1'/></div>
+                                        {/* <div class="slide"><img src={spoder9} alt='spoder1'/></div> */}
+                                        {/* <div class="slide"><img src={spoder10} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder11} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder12} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder12} alt='spoder1'/></div> */}
                                     </div>
                                 </div>
                             </div>
@@ -598,13 +605,13 @@ function Spoderman() {
                                     <img src={spoderHeartImg} style={{maxWidth:'-webkit-fill-available'}}/>
                                 </div>
                                 <div className='text-container' style={{alignSelf:'center'}}>
-                                    <div className='title1 text-left'>
+                                    <div className='title1 text-center md:text-left'>
                                         Spodersense
                                     </div>
                                     <div className="md:text-left text-center leading-8">
                                         A powerful app that provides real-time signals for buying and selling cryptocurrency. Whether you're an experienced trader or a newbie to the crypto scene, SpoderSense can help you make informed decisions and maximize your profits by taking advantage of effective trading tools and new technology, integrated with insights of the SPODERMAN community.
                                     </div>
-                                    <div className='flex gap-4 mt-4'>
+                                    <div className='flex flex-row gap-4 mt-4 justify-center md:justify-start'>
                                         <img src={googlePlayBtnImg} className='w-[140px] cursor-pointer'/>
                                         <img src={appStoreBtnImg} className='w-[140px] cursor-pointer'/>
                                     </div>
