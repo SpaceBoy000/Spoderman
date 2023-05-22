@@ -499,7 +499,7 @@ function Spoderman() {
                             </div>
                         </div>
                         <div className='plain pt-[30px] md:pt-[80px] text-center md:text-right'>
-                            <div className='image-container'>
+                            <div className='image-container p-4 md:p-12'>
                                 <img src={spodercowImg}/>
                             </div>
                             <div className='text-container' style={{alignSelf:'center'}}>
@@ -544,7 +544,7 @@ function Spoderman() {
                                     LAUNCH DAPP
                                 </Button>
                             </div>
-                            <div className='image-container justify-end'>
+                            <div className='image-container justify-end p-8 md:p-12'>
                                 <img src={spoderleftHeader}/>
                             </div>
                         </div>
@@ -594,7 +594,7 @@ function Spoderman() {
                                 </Button>
                             </div>
                             <div className='plain pt-[80px]'>
-                                <div className='image-container'>
+                                <div className='image-container md:p-8'>
                                     <img src={spoderHeartImg} style={{maxWidth:'-webkit-fill-available'}}/>
                                 </div>
                                 <div className='text-container' style={{alignSelf:'center'}}>
@@ -633,7 +633,7 @@ function Spoderman() {
                             <div className="text-center">
                                 <b>$SPODER</b> MASTERPLAN
                             </div>
-                            <div className='flex flex-col md:flex-row px-4 gap-8 mt-8 justify-between text-black'>
+                            <div className='flex flex-col md:flex-row px-4 gap-8 mt-8 md:mt-16 justify-between text-black'>
                                 <div className='flex flex-col gap-2 p-4 md:max-w-[30%] bg-white custom-shadow'>
                                     <div className="text-center title2">Phase 1</div>
                                     <div className="text-center pb-4 ">Airdrop, Launch, and Listing - Catching the Crypto Web</div>
