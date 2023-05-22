@@ -282,7 +282,7 @@ function Spoderman() {
     useEffect(() => {
         const interval = setInterval(() => {
             try {
-                const data = getCountdown(1684905200);
+                const data = getCountdown(1685631600);
                 setCountdown({
                     alive: data.total > 0,
                     days: data.days,
