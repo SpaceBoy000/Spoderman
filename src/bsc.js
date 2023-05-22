@@ -370,7 +370,7 @@ function Spoderman() {
                             <div onClick={() => {
                                 setMobile(true)
                             }}>
-                                <a href="/" target="_blank" rel="noreferrer"
+                                <a href="/webpaper.pdf" target="_blank" rel="noreferrer"
                                     className="mobile-menu-item"
                                 >
                                     <span>Webpaper</span>
@@ -410,7 +410,7 @@ function Spoderman() {
                         <span>Spoderverse</span>
                     </Item>
                     <Item>
-                        <a href='/' target="_blank" rel="noreferrer"
+                        <a href='/webpaper.pdf' target="_blank" rel="noreferrer"
                             style={{
                                 textDecoration: 'none',
                                 fontWeight: "bolder",
