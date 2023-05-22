@@ -703,7 +703,7 @@ function WealthMountain() {
                     <CardDeck className='!mx-0'>
                         SPODERMAN.LOL @ 2023
                     </CardDeck>
-                    <CardDeck className="flex flex-col custom-footer items-center pb-4 md:pb-0 !mx-0">
+                    <CardDeck className="flex flex-col md:flex-row custom-footer items-center pb-4 md:pb-0 !mx-0">
                         <div className='pb-4 md:pb-0 md:pr-4 text-[20px]'>Join our Community</div>
                         <div className='flex flex-row gap-2'>
                             {
