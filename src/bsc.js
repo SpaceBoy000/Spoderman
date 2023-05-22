@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react'
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
+import { Section, useScrollSection } from 'react-scroll-section'
 import './App.css';
 import Box from '@mui/material/Box';
 import Grid from "@mui/material/Grid";
@@ -59,6 +58,12 @@ import spoder10 from "./assets/img/spoders/image 10.png";
 import spoder11 from "./assets/img/spoders/image 11.png";
 import spoder12 from "./assets/img/spoders/image 12.png";
 
+import certik from "./assets/img/audit/certik.png";
+import theStamp from "./assets/img/audit/theStamp.png";
+import tech from "./assets/img/audit/tech.png";
+
+import manImg from "./assets/img/man.png";
+
 import googlePlayBtnImg from "./assets/icons/google_play.png"
 import appStoreBtnImg from "./assets/icons/app_store.png"
 
@@ -101,6 +106,8 @@ const Item = styled('div')(({ theme }) => ({
     color: 'black',
     minWidth: '100px',
     alignSelf: 'center',
+    cursor:'pointer',
+    fontWeight: '900'
 }));
 
 const Wrapper = styled("div")(({ theme }) => ({
@@ -156,6 +163,9 @@ export function shorten(str, length = 6) {
 
 function WealthMountain() {
 
+    const section1 = useScrollSection('section1');
+    const section2 = useScrollSection('section2');
+
     const [sliderValue, setSliderValue] = useState('50');
     const [dropdownOpen, setOpen] = React.useState(false);
     const [userInfo, setUserInfo] = useState([]);
@@ -194,9 +204,11 @@ function WealthMountain() {
     const [cnt, setCnt] = useState(0);
     
     const audits = [
-        { link: 'https://georgestamp.xyz/2022/09/wc-miner-busd/', label: 'Audit 1' },
-        { link: '/audit.pdf', label: 'Audit 2' },
+        { link: '/', label: 'Audit 1', pic: tech },
+        { link: '/', label: 'Audit 2', pic: theStamp },
+        { link: '/', label: 'Audit 3', pic: certik },
     ];
+
     const onChangeAuditNo = (value) => {
         console.log("onChangeAuditNo value=", value); //, " : ", audits[value].link);
         setCnt((cnt + 1) % 2);
@@ -318,14 +330,8 @@ function WealthMountain() {
                             <img src="./favicon.png" alt="ETH Snowball" height="64px" />
                         </div>
                         <div className="mobile_four_btn">
-                            <div onClick={() => {
-                                setMobile(true)
-                            }}>
-                                <a href='/' target="_blank" rel="noreferrer"
-                                    className="mobile-menu-item"
-                                >
-                                    Spoderverse
-                                </a>
+                            <div onClick={() => { setMobile(true); section1.onClick() }} selected={section1.selected}>
+                                Spoderverse
                             </div>
                             <div onClick={() => {
                                 setMobile(true)
@@ -336,14 +342,8 @@ function WealthMountain() {
                                     <span>Webpaper</span>
                                 </a>
                             </div>
-                            <div onClick={() => {
-                                setMobile(true)
-                            }}>
-                                <a href="/" target="_blank" rel="noreferrer"
-                                    className="mobile-menu-item"
-                                >
-                                    <span>Roadmap</span>
-                                </a>
+                            <div onClick={() => { setMobile(true); section2.onClick() }} selected={section2.selected}>
+                                <span>Roadmap</span>
                             </div>
                         </div>
                         <div style={{ flex: 1 }}></div>
@@ -361,15 +361,8 @@ function WealthMountain() {
                     ></div>
                 </div>
             )
-            : null}
-            {/* <Container> */}
-                {/* {countdown.alive && 
-                    <div className='date-title'>
-                        <h5 className='text-center font-weight-bolder text-white pt-1'>Launch Date &nbsp;&nbsp;</h5>
-                        <h5 className='text-center font-weight-bolder text-yellow pt-1'>{`${countdown.days} D : ${countdown.hours} H : ${countdown.minutes} M : ${countdown.seconds >= 10 ? countdown.seconds : '0' + countdown.seconds} S`}</h5>
-                    </div>
-                } */}
-            {/* </Container> */}
+            : <></>}
+
             <div className="custom-header">
                 <img
                     alt="..."
@@ -377,16 +370,8 @@ function WealthMountain() {
                     style={{ width: 'auto', height: '28px' }}
                 />
                 <div className="header_menu">
-                    <Item>
-                        <a href='/' target="_blank" rel="noreferrer"
-                            style={{
-                                textDecoration: 'none',
-                                fontWeight: "bolder",
-                                color: 'black'
-                            }}
-                        >
-                            <span>Spoderverse</span>
-                        </a>
+                    <Item onClick={() => {section1.onClick()}} selected={section1.selected}>
+                        <span>Spoderverse</span>
                     </Item>
                     <Item>
                         <a href='/' target="_blank" rel="noreferrer"
@@ -399,16 +384,8 @@ function WealthMountain() {
                             <span>Webpaper </span>
                         </a>
                     </Item>
-                    <Item>
-                        <a href="/" target="_blank"
-                            style={{
-                                textDecoration: 'none',
-                                fontWeight: "bolder",
-                                color: 'black'
-                            }}
-                        >
-                            <span>Roadmap</span>
-                        </a>
+                    <Item onClick={() => {section2.onClick(); console.log(">>>>>>>")}} selected={section2.selected}>
+                        <span>Roadmap</span>
                     </Item>
                 </div>
 
@@ -434,7 +411,7 @@ function WealthMountain() {
                         <h6 className='text-black font-weight-bold leading-8 text-center md:text-left'>The Web-Slinging, A**-Kicking, Community-Building Token is HERE!</h6>
                         <p className='text-black leading-8 text-center md:text-left'>$Spoder is the hottest meme token in ERC-20 that’s hyper-deflationary, product & community driven, and designed to reward long-term hodlers.</p>
                         <h5 className='pt-4 text-black font-bold'>Launching in</h5>
-                        <div className='text-red text-[28px] font-weight-bold pb-4'>{countdown.alive ? countdown.days + 'D : ' + countdown.hours + "H : " + countdown.minutes + "M : " + (countdown.seconds > 10 ? countdown.seconds : "0" + countdown.seconds) + "S " : ""}</div>
+                        <div className='text-red text-[28px] font-weight-bold pb-4'>{countdown.alive ? countdown.days + 'D : ' + countdown.hours + "H : " + countdown.minutes + "M : " + (countdown.seconds >= 10 ? countdown.seconds : "0" + countdown.seconds) + "S " : ""}</div>
                         <div className='flex gap-3'>
                             <Button
                                 className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px]'>
@@ -542,106 +519,124 @@ function WealthMountain() {
                             </div>
                         </div>
                     </div>
-                    <div className='pt-[30px] md:pt-[80px]'>
-                        <div className='title1 text-center'>
-                            SPODERVERSE
-                        </div>
-                        <div className="text-center leading-8 px-1 md:px-8">
-                            The ultimate NFT play-to-earn platform that's powered by AI-generated NFTs. We're excited to introduce you to our latest feature, which allows you to earn tokens by staking NFTs, engaging in PVP battles, and teaming up to take down powerful bosses.
-                        </div>
-                        <div className='flex justify-between pt-0 md:pt-[48px]'>
-                            <div class="slider">
-                                <div class="slide-track">
-                                    <div class="slide"><img src={spoder1} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder2} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder3} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder4} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder5} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder6} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder7} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder8} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder9} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder10} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder11} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder12} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder1} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder2} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder3} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder4} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder5} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder6} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder7} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder8} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder9} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder10} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder11} alt='spoder1'/></div>
-                                    <div class="slide"><img src={spoder12} alt='spoder1'/></div>
+                    <Section id="section1">
+                        <div className='pt-[30px] md:pt-[80px]'>
+                            <div className='title1 text-center'>
+                                SPODERVERSE
+                            </div>
+                            <div className="text-center leading-8 px-1 md:px-8">
+                                The ultimate NFT play-to-earn platform that's powered by AI-generated NFTs. We're excited to introduce you to our latest feature, which allows you to earn tokens by staking NFTs, engaging in PVP battles, and teaming up to take down powerful bosses.
+                            </div>
+                            <div className='flex justify-between pt-0 md:pt-[48px]'>
+                                <div class="slider">
+                                    <div class="slide-track">
+                                        <div class="slide"><img src={spoder1} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder2} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder3} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder4} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder5} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder6} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder7} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder8} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder9} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder10} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder11} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder12} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder1} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder2} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder3} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder4} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder5} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder6} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder7} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder8} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder9} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder10} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder11} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder12} alt='spoder1'/></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex flex-row justify-center'>
+                                <Button
+                                    className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px] !bg-white'>
+                                    COMING SOON
+                                </Button>
+                            </div>
+                            <div className='plain pt-[80px]'>
+                                <div className='image-container'>
+                                    <img src={spoderHeartImg} style={{maxWidth:'-webkit-fill-available'}}/>
+                                </div>
+                                <div className='text-container' style={{alignSelf:'center'}}>
+                                    <div className='title1 text-left'>
+                                        Spodersense
+                                    </div>
+                                    <div className="md:text-left text-center leading-8">
+                                        A powerful app that provides real-time signals for buying and selling cryptocurrency. Whether you're an experienced trader or a newbie to the crypto scene, SpoderSense can help you make informed decisions and maximize your profits by taking advantage of effective trading tools and new technology, integrated with insights of the SPODERMAN community.
+                                    </div>
+                                    <div className='flex gap-4 mt-4'>
+                                        <img src={googlePlayBtnImg} className='w-[140px]'/>
+                                        <img src={appStoreBtnImg} className='w-[140px]'/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className='flex flex-row justify-center'>
-                            <Button
-                                className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px] !bg-white'>
-                                COMING SOON
-                            </Button>
+                    </Section>
+                    <div className='py-[50px] px-4 bg-black'>
+                        <div className='title1 text-center text-white'>
+                            AUDIT
                         </div>
-                        <div className='plain pt-[80px]'>
-                            <div className='image-container'>
-                                <img src={spoderHeartImg} style={{maxWidth:'-webkit-fill-available'}}/>
-                            </div>
-                            <div className='text-container' style={{alignSelf:'center'}}>
-                                <div className='title1 text-left'>
-                                    Spodersense
-                                </div>
-                                <div className="md:text-left text-center leading-8">
-                                    A powerful app that provides real-time signals for buying and selling cryptocurrency. Whether you're an experienced trader or a newbie to the crypto scene, SpoderSense can help you make informed decisions and maximize your profits by taking advantage of effective trading tools and new technology, integrated with insights of the SPODERMAN community.
-                                </div>
-                                <div className='flex gap-4 mt-4'>
-                                    <img src={googlePlayBtnImg} className='w-[140px]'/>
-                                    <img src={appStoreBtnImg} className='w-[140px]'/>
-                                </div>
-                            </div>
+                        <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-between text-black items-center'>
+                            {
+                                audits.map((item, index) => 
+                                <div key={index}>
+                                    <img src={item.pic}/>
+                                </div>)
+                            }
+                            
                         </div>
                     </div>
-                    <div className='pt-[50px] md:pt-[150px]'>
-                        <div className='title1 text-center'>
-                            ROADMAP
-                        </div>
-                        <div className="text-center">
-                            <b>$SPODER</b> MASTERPLAN
-                        </div>
-                        <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-between text-black'>
-                            <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
-                                <div className="text-center title2">Phase 1</div>
-                                <div className="text-center pb-4 ">Airdrop, Launch, and Listing - Catching the Crypto Web</div>
-                                <ul className="list-disc ml-4 flex flex-col h-full justify-between">
-                                   <li>Airdrop Extravaganza</li> 
-                                   <li>Airdrop<b>(Techrate)</b></li> 
-                                   <li>Token Launch Spodey-Style</li> 
-                                   <li>Fast Track Listing in <b>Coingeko</b> and <b>CoinMarketCap</b></li>
-                                   <li>Contract Renouncement</li>
-                                </ul>
+                    <Section id='section2'>
+                        <div className='pt-[50px] md:pt-[150px]'>
+                            <div className='title1 text-center'>
+                                ROADMAP
                             </div>
-                            <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
-                                <div className="text-center title2">Phase 2</div>
-                                <div className="text-center pb-4">SpoderWeb3.0 Development Building the Ultimate Web-Slinging Platform</div>
-                                <ul className="list-disc ml-4 flex flex-col h-full justify-between">
-                                   <li>Spin(Develop) a Seamless <b>SpoderWeb3.0</b></li> 
-                                   <li>Secure the <b>SpoderWeb3.0</b></li>
-                                   <li><b>SpoderWeb3.0</b> Hype</li> 
-                                 </ul>
+                            <div className="text-center">
+                                <b>$SPODER</b> MASTERPLAN
                             </div>
-                            <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
-                                <div className="text-center title2">Phase 3</div>
-                                <div className="text-center pb-4">SpoderVerse and SpoderSense Development - Unleashing Superpowers</div>
-                                <ul className="list-disc ml-4 flex flex-col h-full justify-between">
-                                   <li>Spin (Develop) a Seamless <b>SpoderWeb3.0</b></li> 
-                                   <li>Tingle the <b>SpoderSense</b></li>
-                                   <li><b>Superhero-level Marketing</b></li>
-                                </ul>
+                            <div className='flex flex-col md:flex-row px-4 gap-8 mt-4 justify-between text-black'>
+                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                    <div className="text-center title2">Phase 1</div>
+                                    <div className="text-center pb-4 ">Airdrop, Launch, and Listing - Catching the Crypto Web</div>
+                                    <ul className="list-disc ml-4 flex flex-col h-full justify-between">
+                                    <li>Airdrop Extravaganza</li> 
+                                    <li>Airdrop<b>(Techrate)</b></li> 
+                                    <li>Token Launch Spodey-Style</li> 
+                                    <li>Fast Track Listing in <b>Coingeko</b> and <b>CoinMarketCap</b></li>
+                                    <li>Contract Renouncement</li>
+                                    </ul>
+                                </div>
+                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                    <div className="text-center title2">Phase 2</div>
+                                    <div className="text-center pb-4">SpoderWeb3.0 Development Building the Ultimate Web-Slinging Platform</div>
+                                    <ul className="list-disc ml-4 flex flex-col h-full justify-between">
+                                    <li>Spin(Develop) a Seamless <b>SpoderWeb3.0</b></li> 
+                                    <li>Secure the <b>SpoderWeb3.0</b></li>
+                                    <li><b>SpoderWeb3.0</b> Hype</li> 
+                                    </ul>
+                                </div>
+                                <div className='flex flex-col gap-2 p-4 md:max-w-[30%] border-[8px] border-black border-right-0 border-bottom-0'>
+                                    <div className="text-center title2">Phase 3</div>
+                                    <div className="text-center pb-4">SpoderVerse and SpoderSense Development - Unleashing Superpowers</div>
+                                    <ul className="list-disc ml-4 flex flex-col h-full justify-between">
+                                    <li>Spin (Develop) a Seamless <b>SpoderWeb3.0</b></li> 
+                                    <li>Tingle the <b>SpoderSense</b></li>
+                                    <li><b>Superhero-level Marketing</b></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Section>
                     <div className='pt-[50px] md:pt-[150px]'>
                         <div className='title1 text-center'>
                             Tokenomics
@@ -676,14 +671,20 @@ function WealthMountain() {
                             </div>
                         </div>
                     </div>
+                    <div className='pt-[50px] md:pt-[150px]'>
+                        <div className='title1 text-center'>
+                            Disclaimer
+                        </div>
+                        <div className="text-center">
+                            $Spoder is not associated with any creator or studio. $Spoder is a form of appreciation by OG memers, to showcase the Spoderman meme to the new generation and beyond.
+                        </div>
+                        <div className='flex gap-4 justify-center mt-4 pt-[24px] md:pt-[54px]'>
+                            <img src={manImg}/>
+                        </div>
+                    </div>
                 </Container>
             </div>
             
-            {/* <div style={{marginTop:'50px'}}>
-                <h3 className='py-3 text-white text-center font-weight-900'>Frequently Asked Questions</h3>
-                <FAQList/>
-            </div> */}
-
             {/* <div className="pt-3 text-center calvino text-lightblue">
                 <Card style={{ borderRadius: '0px', padding: '40px 10px 30px 10px' }}>
                     <CardDeck className="custom-footer">
@@ -696,7 +697,6 @@ function WealthMountain() {
                 </Card>
             </div> */}
         </>
-
     )
 }
 export default WealthMountain;
