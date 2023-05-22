@@ -381,11 +381,13 @@ function Spoderman() {
                             </div>
                         </div>
                         <div style={{ flex: 1 }}></div>
-                        <Button
-                            className='custom-button connect-button !text-[13px]'
-                            >
-                            JOIN AIRDROP
-                        </Button>
+                        <a href='http://t.me/SpodermanAirdrop_Bot' target='_blank' alt='Join Airdrop'>
+                            <Button
+                                className='custom-button connect-button !text-[13px]'
+                                >
+                                JOIN AIRDROP
+                            </Button>
+                        </a>
                     </div>
                     <div
                         className="empty_mobile"
@@ -422,12 +424,13 @@ function Spoderman() {
                         <span>Roadmap</span>
                     </Item>
                 </div>
-
-                <Button
-                    className='custom-button connect-button desktop-button'
-                    >
-                    JOIN AIRDROP
-                </Button>
+                <a href='http://t.me/SpodermanAirdrop_Bot' target='_blank' alt='Join Airdrop'>
+                    <Button
+                        className='custom-button connect-button desktop-button'
+                        >
+                        JOIN AIRDROP
+                    </Button>
+                </a>
                 <div
                     className='mobile_btn'
                     onClick={() => {
@@ -447,14 +450,18 @@ function Spoderman() {
                         <h5 className='pt-4 text-black font-bold'>Launching in</h5>
                         <div className='text-red text-[28px] font-weight-bold pb-4'>{countdown.alive ? countdown.days + 'D : ' + countdown.hours + "H : " + countdown.minutes + "M : " + (countdown.seconds >= 10 ? countdown.seconds : "0" + countdown.seconds) + "S " : ""}</div>
                         <div className='flex gap-3'>
-                            <Button
-                                className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px]'>
-                                Join Airdrop
-                            </Button>
-                            <Button
-                                className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px] !bg-white'>
-                                Telegram
-                            </Button>
+                            <a href='http://t.me/SpodermanAirdrop_Bot' target='_blank' alt='Join Airdrop'>
+                                <Button
+                                    className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px]'>
+                                    Join Airdrop
+                                </Button>
+                            </a>
+                            <a href='https://t.me/spodermanlol' target='_blank' alt='Join Airdrop'>
+                                <Button
+                                    className='custom-button connect-button w-[150px] max-w-[50%] !text-[13px] md:text-[16px] !bg-white'>
+                                    Telegram
+                                </Button>
+                            </a>
                         </div>
                     </Card>
                     <Card className="banner-card flex flex-row justify-end">
