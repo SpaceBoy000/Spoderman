@@ -626,7 +626,7 @@ function Spoderman() {
                             </div>
                         </div>
                     </Section>
-                    <div className='py-[50px] md:mt-8 px-4 bg-black absolute left-0 w-full'>
+                    {/* <div className='py-[50px] md:mt-8 px-4 bg-black absolute left-0 w-full'>
                         <div className='title1 text-center text-white'>
                             AUDIT
                         </div>
@@ -638,9 +638,9 @@ function Spoderman() {
                                 </a>)
                             }
                         </div>
-                    </div>
+                    </div> */}
                     <Section id='section2'>
-                        <div className='mt-[550px] md:mt-[350px]'>
+                        <div className='mt-[50px] md:mt-[150px]'>
                             <div className='title1 text-center'>
                                 ROADMAP
                             </div>
