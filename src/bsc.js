@@ -54,10 +54,6 @@ import spoder5 from "./assets/img/spoders/image 5.png";
 import spoder6 from "./assets/img/spoders/image 6.png";
 import spoder7 from "./assets/img/spoders/image 7.png";
 import spoder8 from "./assets/img/spoders/image 8.png";
-// import spoder9 from "./assets/img/spoders/image 9.png";
-// import spoder10 from "./assets/img/spoders/image 10.png";
-// import spoder11 from "./assets/img/spoders/image 11.png";
-// import spoder12 from "./assets/img/spoders/image 12.png";
 
 import telIcon from "./assets/icons/telegram.png";
 import discordIcon from "./assets/icons/discord.png";
@@ -74,9 +70,6 @@ import googlePlayBtnImg from "./assets/icons/google_play.png"
 import appStoreBtnImg from "./assets/icons/app_store.png"
 
 
-
-// import abiDecoder from "abi-decoder";
-// window.Buffer = window.Buffer || require("buffer").Buffer;
 import {
     Button,
     Card,
@@ -97,70 +90,9 @@ import {
 } from "reactstrap";
 import { ethers, Contract } from 'ethers';
 
-// AOS.init({ duration: 2000 });
-const TabsContainer = styled.div`
-  display: flex;
-  padding: 2px;
-`;
-
-const Item = styled('div')(({ theme }) => ({
-    display: 'flex',
-    justifyContent: 'center',
-    padding: '5px 20px',
-    textAlign: 'center',
-    fontSize: "16px",
-    color: 'black',
-    minWidth: '100px',
-    alignSelf: 'center',
-    cursor:'pointer',
-    fontWeight: '900'
-}));
-
-const Wrapper = styled("div")(({ theme }) => ({
-    minWidth: "250px",
-    margin: "10px",
-    width: '250px',
-    display: 'inline-block',
-    transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-    overflow: "hidden",
-    boxShadow: "rgba(0, 0, 0, 0.35) 0px 2px 3px",
-    borderRadius: "20px",
-    marginBottom: "24px",
-    border: 'solid 1px #0e131f',
-    '&:hover': {
-      boxShadow: "0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f5ea1a, 0 0 0.6em #e0f734, 0 0 0.8em #ebf705, 0 0 1em #e1f414, 0 0 1.2em #cde60f",
-    },
-    [theme.breakpoints.down('md')]: {
-      width: '90%',
-    }
-  }));
-
 // const web3 = new Web3(
 //     new Web3.providers.HttpProvider("https://bsc-dataseed1.binance.org/")
 // );
-
-
-// const abiCoder = require("web3-eth-abi");
-// const investFunc = /^0x3acb1a0a/;
-// const claimFunc = /^0x9ddf840d/;
-// const inputs = [
-//     {
-//         "internalType": "uint256",
-//         "name": "amtx",
-//         "type": "uint256"
-//     },
-//     {
-//         "internalType": "address",
-//         "name": "ref",
-//         "type": "address"
-//     }
-// ];
-
-// const decodeFunction = (data) => {
-//     let decoded = abiCoder.decodeParameters(inputs, data.slice(10));   
-//     // console.log("decoded: ", decoded.amtx / 10 ** 18);
-//     return decoded.amtx / 10 ** 18;
-// }
 
 export function shorten(str, length = 6) {
     if (str.length < 10) return str;
@@ -208,7 +140,7 @@ function Spoderman() {
 
     const [auditNo, setAuditNo] = useState('https://georgestamp.xyz/2022/09/wc-miner-busd/');
     const [cnt, setCnt] = useState(0);
-    
+
     const audits = [
         { link: '/', label: 'Audit 1', pic: tech },
         { link: '/', label: 'Audit 2', pic: theStamp },
@@ -216,32 +148,39 @@ function Spoderman() {
     ];
 
     const socials = [
-        {link: 'https://twitter.com/Spodermanlol', label: 'twitter', pic: twitterIcon},
-        {link: 'https://t.me/spodermanlol', label: 'telegram', pic: telIcon},
-        {link: 'https://t.me/spodermanlolchat', label: 'telegram', pic: telIcon},
-        {link: 'https://discord.gg/46bPadV5QM', label: 'discord', pic: discordIcon},
-        {link: 'https://www.instagram.com/spoderman.lol/', label: 'instagram', pic: insIcon},
+        { link: 'https://twitter.com/Spodermanlol', label: 'twitter', pic: twitterIcon },
+        { link: 'https://t.me/spodermanlol', label: 'telegram', pic: telIcon },
+        { link: 'https://t.me/spodermanlolchat', label: 'telegram', pic: telIcon },
+        { link: 'https://discord.gg/46bPadV5QM', label: 'discord', pic: discordIcon },
+        { link: 'https://www.instagram.com/spoderman.lol/', label: 'instagram', pic: insIcon },
     ];
 
     const spiders = [
-        {link: '', label: 'spider1', pic: spider1},
-        {link: '', label: 'spider2', pic: spider2},
-        {link: '', label: 'spider3', pic: spider3},
-        {link: '', label: 'spider4', pic: spider4},
-        {link: '', label: 'spider5', pic: spider5},
-        {link: '', label: 'spider6', pic: spider6},
-        {link: '', label: 'spider7', pic: spider7},
-        {link: '', label: 'spider8', pic: spider8},
+        { link: '', label: 'spider1', pic: spider1 },
+        { link: '', label: 'spider2', pic: spider2 },
+        { link: '', label: 'spider3', pic: spider3 },
+        { link: '', label: 'spider4', pic: spider4 },
+        { link: '', label: 'spider5', pic: spider5 },
+        { link: '', label: 'spider6', pic: spider6 },
+        { link: '', label: 'spider7', pic: spider7 },
+        { link: '', label: 'spider8', pic: spider8 },
     ];
 
     const tokenomics = [
-        {label: 'Airdrop', value: '1%'},
-        {label: 'CEX', value: '5%'},
-        {label: 'Spoderweb3.0 TVL', value: '40%'},
-        {label: 'Liquidity', value: '45%'},
-        {label: 'Developers Wallet', value: '4%'},
-        {label: 'Marketing Wallet', value: '5%'},
+        { label: 'Airdrop', value: '1%' },
+        { label: 'CEX', value: '5%' },
+        { label: 'Spoderweb3.0 TVL', value: '40%' },
+        { label: 'Liquidity', value: '45%' },
+        { label: 'Developers Wallet', value: '4%' },
+        { label: 'Marketing Wallet', value: '5%' },
     ]
+
+    const buySteps = [
+        { title: 'Create your preferred wallet', content: 'Download your wallet of choice (Metamask, Trust Wallet) from Google Play/App Store or from the Google Web Store on your browser.' },
+        { title: 'Purchase ETH', content: 'Get your ETH by purchasing on exchange (Binance, etc) or buy directly from your preferred wallet (if available) then send it to your wallet address.' },
+        { title: 'Use Uniswap', content: 'Go to https://app.uniswap.org/#/swap on your mobile or web browser. Connect your preferred wallet to the website and process the wallet signature.' },
+        { title: 'Swap your ETH for SPODER TOKEN', content: 'Now you can swap ETH to $SPODER, but make sure you adjust the slippage to 0 or 0.1% to circumvent MEV bots.' },
+    ];
 
     const onChangeAuditNo = (value) => {
         console.log("onChangeAuditNo value=", value); //, " : ", audits[value].link);
@@ -298,36 +237,6 @@ function Spoderman() {
         return () => clearInterval(interval);
     }, [])
 
-
-    const handleChange = (e, value) => {
-        setActiveTab(value);
-        recalculateInfo()
-    }
-    // window.addEventListener("focus", function () {
-    //     recalculateInfo();
-    // })
-
-    async function recalculateInfo() {
-        if (contract === undefined || contract === null) {
-            return;
-        }
-
-        contract.userInfo().then(value => {
-            // console.log("User Info xx=> ", value);
-            setUserInfo(value)
-        })
-
-        contract.getUserInfo().then(value => {
-            console.log("getuserInfo: ", value);
-            setUserDepositInfo(value);
-        })
-
-        contract.getTotalRewards(userWalletAddress).then((value) => {
-            setTotalClaimableRewards(ethers.utils.formatEther(value));
-        })
-        return;
-    }
-
     const stablecoinContract = useContract({
         addressOrName: stableCoin,
         contractInterface: ['function approve(address spender, uint amount) public returns(bool)'],
@@ -381,22 +290,39 @@ function Spoderman() {
                         </div>
                     </Card>
                     <Card className="banner-card flex flex-row justify-end">
-                        <img src={ spoder1Img } alt="..." className='max-w-[500px] w-full'/>
+                        <img src={spoder1Img} alt="..." className='max-w-[500px] w-full' />
                     </Card>
                 </CardDeck>
             </Container>
 
             <div className='main-content pb-8'>
                 <Container className="pt-3">
-                    <div>
+                    <div className='mt-[50px] md:mt-[10px] bg-black absolute left-0 right-0 py-16 px-4 sm:px-16 md:px-32'>
+                        <div className='text-white title1 text-center pt-8'>
+                            How To Buy
+                        </div>
+                        <div className='flex flex-col px-4 gap-8 mt-4 md:mt-4 justify-between text-black'>
+                            {
+                                buySteps.map((item, index) => {
+                                    return (
+                                        <div className='flex flex-col gap-2 p-4 md:max-w-full bg-white custom-shadow' key={index}>
+                                            <div className="text-center title2">{(index + 1) + ". " + item.title}</div>
+                                            <div className="text-center pb-4 ">{item.content}</div>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
+                    <div className='mt-[1500px] sm:mt-[1300px] md:mt-[1200px] lg:mt-[1100px]'>
                         <div className='title1 text-center'>
                             Avengurs
                         </div>
                         <div className='flex justify-between flex-wrap pt-[20px] md:pt-[54px] px-8'>
                             {
-                                spiders.map((item, index) => 
+                                spiders.map((item, index) =>
                                     <a href={item.link} target='_blank' key={index} className='w-1/2 md:w-1/4 flex flex-row justify-center'>
-                                        <img src={item.pic} className='spider-img' alt={item.label}/>
+                                        <img src={item.pic} className='spider-img' alt={item.label} />
                                     </a>
                                 )
                             }
@@ -407,7 +333,7 @@ function Spoderman() {
                             ABOUT SPODERMAN
                         </div>
                         <div className="text-center">
-                            Making the world a better place, one <span className='font-weight-bold'>$SPODER</span> at a time! 
+                            Making the world a better place, one <span className='font-weight-bold'>$SPODER</span> at a time!
                         </div>
                         <div className='plain flex-revert pt-[54px] text-center md:text-left'>
                             <div className='text-container self-center'>
@@ -419,14 +345,14 @@ function Spoderman() {
                                 </div>
                             </div>
                             <div className='image-container justify-end'>
-                                <img src={spoder2Img}/>
+                                <img src={spoder2Img} />
                             </div>
                         </div>
                         <div className='plain pt-[30px] md:pt-[80px] text-center md:text-right'>
                             <div className='image-container p-4 md:p-12'>
-                                <img src={spodercowImg}/>
+                                <img src={spodercowImg} />
                             </div>
-                            <div className='text-container' style={{alignSelf:'center'}}>
+                            <div className='text-container' style={{ alignSelf: 'center' }}>
                                 <div className='title2'>
                                     HyperDEFLATIONARY
                                 </div>
@@ -436,7 +362,7 @@ function Spoderman() {
                             </div>
                         </div>
                         <div className='plain flex-revert pt-[30px] md:pt-[80px] text-center md:text-left'>
-                            <div className='text-container' style={{alignSelf:'center'}}>
+                            <div className='text-container' style={{ alignSelf: 'center' }}>
                                 <div className='title2'>
                                     Community
                                 </div>
@@ -445,7 +371,7 @@ function Spoderman() {
                                 </div>
                             </div>
                             <div className='image-container justify-end'>
-                                <img src={spoder_dogImg}/>
+                                <img src={spoder_dogImg} />
                             </div>
                         </div>
                     </div>
@@ -457,7 +383,7 @@ function Spoderman() {
                             Spoderman Superhero Products
                         </div>
                         <div className='plain flex-revert pt-[54px] leading-8 text-center md:text-left'>
-                            <div className='text-container' style={{alignSelf:'center'}}>
+                            <div className='text-container' style={{ alignSelf: 'center' }}>
                                 <div className='title2 pb-4'>
                                     SPODERWEB 3.0
                                 </div>
@@ -473,7 +399,7 @@ function Spoderman() {
                                 </Button>
                             </div>
                             <div className='image-container justify-end p-8 md:p-12'>
-                                <img src={spoderleftHeader}/>
+                                <img src={spoderleftHeader} />
                             </div>
                         </div>
                     </div>
@@ -488,28 +414,28 @@ function Spoderman() {
                             <div className='flex justify-between pt-0 md:pt-[48px]'>
                                 <div class="slider">
                                     <div class="slide-track">
-                                        <div class="slide"><img src={spoder0} alt='spoder0'/></div>
-                                        <div class="slide"><img src={spoder1} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder2} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder3} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder4} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder5} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder6} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder7} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder8} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder0} alt='spoder0' /></div>
+                                        <div class="slide"><img src={spoder1} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder2} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder3} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder4} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder5} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder6} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder7} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder8} alt='spoder1' /></div>
                                         {/* <div class="slide"><img src={spoder9} alt='spoder1'/></div> */}
                                         {/* <div class="slide"><img src={spoder10} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder11} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder12} alt='spoder1'/></div> */}
-                                        <div class="slide"><img src={spoder0} alt='spoder0'/></div>
-                                        <div class="slide"><img src={spoder1} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder2} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder3} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder4} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder5} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder6} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder7} alt='spoder1'/></div>
-                                        <div class="slide"><img src={spoder8} alt='spoder1'/></div>
+                                        <div class="slide"><img src={spoder0} alt='spoder0' /></div>
+                                        <div class="slide"><img src={spoder1} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder2} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder3} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder4} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder5} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder6} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder7} alt='spoder1' /></div>
+                                        <div class="slide"><img src={spoder8} alt='spoder1' /></div>
                                         {/* <div class="slide"><img src={spoder9} alt='spoder1'/></div> */}
                                         {/* <div class="slide"><img src={spoder10} alt='spoder1'/></div>
                                         <div class="slide"><img src={spoder11} alt='spoder1'/></div>
@@ -525,9 +451,9 @@ function Spoderman() {
                             </div>
                             <div className='plain pt-[80px]'>
                                 <div className='image-container md:p-8'>
-                                    <img src={spoderHeartImg} style={{maxWidth:'-webkit-fill-available'}}/>
+                                    <img src={spoderHeartImg} style={{ maxWidth: '-webkit-fill-available' }} />
                                 </div>
-                                <div className='text-container' style={{alignSelf:'center'}}>
+                                <div className='text-container' style={{ alignSelf: 'center' }}>
                                     <div className='title1 text-center md:text-left'>
                                         Spodersense
                                     </div>
@@ -535,8 +461,8 @@ function Spoderman() {
                                         A powerful app that provides real-time signals for buying and selling cryptocurrency. Whether you're an experienced trader or a newbie to the crypto scene, SpoderSense can help you make informed decisions and maximize your profits by taking advantage of effective trading tools and new technology, integrated with insights of the SPODERMAN community.
                                     </div>
                                     <div className='flex flex-row gap-4 mt-4 justify-center md:justify-start'>
-                                        <img src={googlePlayBtnImg} className='w-[140px] cursor-pointer'/>
-                                        <img src={appStoreBtnImg} className='w-[140px] cursor-pointer'/>
+                                        <img src={googlePlayBtnImg} className='w-[140px] cursor-pointer' />
+                                        <img src={appStoreBtnImg} className='w-[140px] cursor-pointer' />
                                     </div>
                                 </div>
                             </div>
@@ -568,29 +494,29 @@ function Spoderman() {
                                     <div className="text-center title2">Phase 1</div>
                                     <div className="text-center pb-4 ">Airdrop, Launch, and Listing - Catching the Crypto Web</div>
                                     <ul className="list-disc ml-4 flex flex-col h-full justify-between">
-                                    <li>Airdrop Extravaganza</li> 
-                                    <li>Audit<b>(Techrate & The Stamp)</b></li> 
-                                    <li>Token Launch Spodey-Style</li> 
-                                    <li>Fast Track Listing in <b>Coingeko</b> and <b>CoinMarketCap</b></li>
-                                    <li>Contract Renouncement</li>
+                                        <li>Airdrop Extravaganza</li>
+                                        <li>Audit<b>(Techrate & The Stamp)</b></li>
+                                        <li>Token Launch Spodey-Style</li>
+                                        <li>Fast Track Listing in <b>Coingeko</b> and <b>CoinMarketCap</b></li>
+                                        <li>Contract Renouncement</li>
                                     </ul>
                                 </div>
                                 <div className='flex flex-col gap-2 p-4 md:max-w-[30%] bg-white custom-shadow'>
                                     <div className="text-center title2">Phase 2</div>
                                     <div className="text-center pb-4">SpoderWeb3.0 Development Building the Ultimate Web-Slinging Platform</div>
                                     <ul className="list-disc ml-4 flex flex-col h-full justify-between">
-                                    <li>Spin(Develop) a Seamless <b>SpoderWeb3.0</b></li> 
-                                    <li>Secure the <b>SpoderWeb3.0</b></li>
-                                    <li><b>SpoderWeb3.0</b> Hype</li> 
+                                        <li>Spin(Develop) a Seamless <b>SpoderWeb3.0</b></li>
+                                        <li>Secure the <b>SpoderWeb3.0</b></li>
+                                        <li><b>SpoderWeb3.0</b> Hype</li>
                                     </ul>
                                 </div>
                                 <div className='flex flex-col gap-2 p-4 md:max-w-[30%] bg-white custom-shadow'>
                                     <div className="text-center title2">Phase 3</div>
                                     <div className="text-center pb-4">SpoderVerse and SpoderSense Development - Unleashing Superpowers</div>
                                     <ul className="list-disc ml-4 flex flex-col h-full justify-between">
-                                    <li>Spin (Develop) a Seamless <b>SpoderWeb3.0</b></li> 
-                                    <li>Tingle the <b>SpoderSense</b></li>
-                                    <li><b>Superhero-level Marketing</b></li>
+                                        <li>Spin (Develop) a Seamless <b>SpoderWeb3.0</b></li>
+                                        <li>Tingle the <b>SpoderSense</b></li>
+                                        <li><b>Superhero-level Marketing</b></li>
                                     </ul>
                                 </div>
                             </div>
@@ -604,7 +530,7 @@ function Spoderman() {
                             <span className='font-weight-bold text-black'>BUY & SELL TAX 5%</span> (2% BURN, 2% LIQUIDITY, 1% BUYBACK)
                         </div>
                         <div className='flex flex-wrap gap-4 justify-center mt-4 pt-[24px] md:pt-[54px]'>
-                            {tokenomics.map((item, index) => 
+                            {tokenomics.map((item, index) =>
                                 <div className='flex flex-col w-[45%] md:w-[130px] p-2' key={index}>
                                     <div className='text-red text-center text-3xl font-bold font-adamwarrenpro'>{item.value}</div>
                                     <div className="text-center pt-2">{item.label}</div>
@@ -620,7 +546,7 @@ function Spoderman() {
                             $Spoder is not associated with any creator or studio. $Spoder is a form of appreciation by OG memers, to showcase the Spoderman meme to the new generation and beyond.
                         </div>
                         <div className='flex gap-4 justify-center mt-4 pt-[24px] md:pt-[54px]'>
-                            <img src={manImg}/>
+                            <img src={manImg} />
                         </div>
                     </div>
                 </Container>
