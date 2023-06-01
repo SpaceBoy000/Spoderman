@@ -357,90 +357,6 @@ function Spoderman() {
 
     return (
         <>
-            {mobile === true ? (
-                <div className="mobile_head">
-                    <div className="mobile_herader_content">
-                        <div style={{ alignSelf: "center", marginBottom: "30px" }}>
-                            <img src="./favicon.png" alt="ETH Snowball" height="64px" />
-                        </div>
-                        <div className="mobile_four_btn">
-                            <div onClick={() => { setMobile(true); section1.onClick() }} selected={section1.selected} className='font-bold'>
-                                Spoderverse
-                            </div>
-                            <div onClick={() => {
-                                setMobile(true)
-                            }}>
-                                <a href="/webpaper.pdf" target="_blank" rel="noreferrer"
-                                    className="mobile-menu-item"
-                                >
-                                    <span>Webpaper</span>
-                                </a>
-                            </div>
-                            <div onClick={() => { setMobile(true); section2.onClick() }} selected={section2.selected} className='font-bold'>
-                                <span>Roadmap</span>
-                            </div>
-                        </div>
-                        <div style={{ flex: 1 }}></div>
-                        <a href='http://t.me/SpodermanAirdrop_Bot' target='_blank' alt='Join Airdrop'>
-                            <Button
-                                className='custom-button connect-button !text-[13px]'
-                                >
-                                JOIN AIRDROP
-                            </Button>
-                        </a>
-                    </div>
-                    <div
-                        className="empty_mobile"
-                        onClick={() => {
-                            setMobile(false)
-                        }}
-                    ></div>
-                </div>
-            )
-            : <></>}
-
-            <div className="custom-header bg-white">
-                <img
-                    alt="..."
-                    src={logoImg}
-                    style={{ width: 'auto', height: '28px' }}
-                />
-                <div className="header_menu">
-                    <Item onClick={() => {section1.onClick()}} selected={section1.selected}>
-                        <span>Spoderverse</span>
-                    </Item>
-                    <Item>
-                        <a href='/webpaper.pdf' target="_blank" rel="noreferrer"
-                            style={{
-                                textDecoration: 'none',
-                                fontWeight: "bolder",
-                                color: 'black'
-                            }}
-                        >
-                            <span>Webpaper </span>
-                        </a>
-                    </Item>
-                    <Item onClick={() => {section2.onClick(); console.log(">>>>>>>")}} selected={section2.selected}>
-                        <span>Roadmap</span>
-                    </Item>
-                </div>
-                <a href='http://t.me/SpodermanAirdrop_Bot' target='_blank' alt='Join Airdrop'>
-                    <Button
-                        className='custom-button connect-button desktop-button'
-                        >
-                        JOIN AIRDROP
-                    </Button>
-                </a>
-                <div
-                    className='mobile_btn'
-                    onClick={() => {
-                        setMobile(true)
-                    }}
-                >
-                    <GiHamburgerMenu />
-                </div>
-            </div>
-            
             <Container className='!max-w-full md:!max-w-[80%]'>
                 <CardDeck className='flex justify-between'>
                     <Card className='banner-card pt-[70px] md:!pt-[100px] text-center md:text-left'>
@@ -708,27 +624,6 @@ function Spoderman() {
                         </div>
                     </div>
                 </Container>
-            </div>
-            
-            <div className="pt-3 text-center calvino text-lightblue">
-                {/* <Card style={{ borderRadius: '0px', padding: '40px', display:'flex', flexDirection:'row', alignItems:'center'}}> */}
-                <Card className='rounded-0 py-4 md:px-8 gap-4 flex !flex-col-reverse md:!flex-row justify-between items-center'>
-                    <CardDeck className='!mx-0'>
-                        SPODERMAN.LOL @ 2023
-                    </CardDeck>
-                    <CardDeck className="flex flex-col md:flex-row custom-footer items-center pb-4 md:pb-0 !mx-0">
-                        <div className='pb-4 md:pb-0 md:pr-4 text-[20px]'>Join our Community</div>
-                        <div className='flex flex-row gap-2'>
-                            {
-                                socials.map((item, index) => 
-                                <a href={item.link} target='_blank' alt={item.label} key={index}>
-                                    <img src={item.pic} alt={item.label}/>
-                                </a>
-                                )
-                            }
-                        </div>
-                    </CardDeck>
-                </Card>
             </div>
         </>
     )
